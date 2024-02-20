@@ -1,4 +1,4 @@
- \chapter{Propuesta de solución}
+ \chapter{Características y diseño del sistema}
 \label{chap:chapter2}
 
 \section{Introducción al capítulo}
@@ -34,7 +34,9 @@ tiempos de desarrollo en base a esta información. Las estimaciones realizadas en
 debido a que estarán basadas en datos de muy alto nivel y podrían variar cuando se analicen en cada ite-
 ración. Además se toman acuerdos sobre el contenido de la primera entrega y se determina un cronograma
 en conjunto con el cliente. Una entrega debería obtenerse en no más de tres meses \citep{escribano2002introduccion,joskowicz2008reglas}.
-\\
+
+\subsection{Historias de Usuarios}
+
 Las HU son la técnica que utiliza XP para especificar los requisitos de software, estas deben ser pro-
 gramadas en un tiempo entre una y tres semanas. Si la estimación es superior a las tres semanas, debe ser
 dividida en dos o más historias. Si es menos de una semana, se debe combinar con otra HU. Las estimaciones
@@ -131,261 +133,19 @@ parra llevar a cabo el desarrollo de los módulos.
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
+\subsection{Estimación de esfuerzo por Historia de Usuario}
 
-\section{Sección de prueba}
-Escribir aquí el capítulo 2. Prueba de glosario  \gls{Engine}. A continuación un ejemplo de enlace al anexo \hyperlink{bloque.1}{Bloque Corona}. Este es un ejemplo de matriz con bordes numerados \citep{Mathew2010}.
+Se realiza la estimación de esfuerzo que arroja cada HU, con el objetivo de obtener un correcto desarrollo
+del sistema. Para una mayor organización se decide además, asignar a cada iteración el conjunto de historias
+agrupadas en correspondencia con el módulo al que representen. A continuación se muestra la estimación
+realizada:
 
-\newcommand{\colorentrygreen}[1]{\multicolumn{1}{c}{\cellcolor{green!20} #1}}
-\newcommand{\colorentryred}[1]{\multicolumn{1}{c}{\cellcolor{red!20} #1}}
+\subsection{Desarrollo del plan de iteraciones}
 
-\begin{align*}
-	\kbordermatrix
-	{
-		Padre&1&2&3&4\\
-		1&\colorentrygreen{0}&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		2&0&0&0&1\\
-		3&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		4&0&0&1&0
-	}
-	\begin{array}{l}
-		\rightarrow \mbox{Seleccionada aleatoriamente}\\
-		\quad\\
-		\rightarrow \mbox{Seleccionada aleatoriamente}\\
-		\quad\\
-	\end{array}
-	\qquad
-	\kbordermatrix
-	{
-		Madre&1&2&3&4\\
-		1&1&0&0&0\\
-		2&0&1&0&0\\
-		3&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}&\colorentryred{0}\\
-		4&\colorentryred{0}&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}
-	}
-\end{align*}
-\begin{align}
-\stackrel{\quad Hijo}
-{
-	\kbordermatrix
-	{
-		 &1&2&3&4\\
-		1&\colorentrygreen{0}&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		2&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}&\colorentryred{0}\\
-		3&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		4&\colorentryred{0}&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}
-	}
-}
-\end{align}
-
-\lipsum[1-2]
-\hlblock{Este es un ejemplo de cita \citep{Mathew2010}
-Esta es una prueba de cómo se escribe un pseudocódigo en \LaTeX.}
-\begin{algorithm}[!h]
-\caption{Estrategia de BellmanKalaba}\label{alg:algorithtest}
-  \begin{algorithmic}[1]
-\Procedure {BellmanKalaba}{$G$, $u$, $l$, $p$}
-  \ForAll {$v \in V(G)$}
-    \State $l(v) \leftarrow \infty$
-  \EndFor
-  \State $l(u) \leftarrow 0$
-  \Repeat
-    \For {$i \leftarrow 1, n$}
-      \State $min \leftarrow l(v_i)$
-      \For {$j \leftarrow 1, n$}
-        \If {$min > e(v_i, v_j) + l(v_j)$}
-          \State $min \leftarrow e(v_i, v_j) + l(v_j)$
-          \State $p(i) \leftarrow v_j$
-        \EndIf
-      \EndFor
-    \State $l'(i) \leftarrow min$
-    \EndFor
-  \State $changed \leftarrow l \not= l'$
-  \State $l \leftarrow l'$
-  \Until{$\neg changed$}
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-
-\section{Ejemplos de código fuente}
-\lipsum[2-4]
-Este es un ejemplo de cita \citep{Mathew2010}
-\singlespacing
-\loadlanguage{C++}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=1, lastline=14, caption=Búsqueda de máximo]{Anexos/code.cpp}
-
-\loadlanguage{Java}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=17, lastline=27, caption=Ejemplo de código en Java]{Anexos/code.cpp}
-
-\loadlanguage{PHP}
-\lstset{emph=[3]{join, condition, idtarea, nombre, descripcion, idinstructora, fecha}} % attributes
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=29, lastline=60, caption=Ejemplo de código en PHP]{Anexos/code.cpp}
-
-\loadlanguage{PHP}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=147, caption=Ejemplo de código en PHP]{Anexos/code.cpp}
-
-\loadlanguage{Python}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=62, lastline=67, caption=Ejemplo de código en Python]{Anexos/code.cpp}
-
-\lstinputlisting[style=htmlcssjs, tabsize=3, breaklines, frame=lines, firstline=69, lastline=87, caption=Ejemplo de código en htmlcssjs]{Anexos/code.cpp}
-
-\lstinputlisting[style=htmlcssjs, tabsize=3, breaklines, frame=lines, firstline=89, lastline=146, caption=Ejemplo de código en htmlcssjs]{Anexos/code.cpp}
-
-
-
-\chapter{Ejemplo de tabla grande}
-   \section{Tabla aleatoria}
-  
-   \begin{longtable}[c]{|l|l|l|}
-	   \captionsetup{margin=1.15\leftmargin}
-	   \caption{Feasible triples for highly variable Grid, MLMMH.}
-	   \label{grid_mlmmh} \\[2ex]
-	   
-	   \hline \multicolumn{1}{|c|}{\textbf{Time (s)}} & \multicolumn{1}{c|}{\textbf{Triple chosen}} & \multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
-	   \endfirsthead
-	   
-	   \caption{continued from previous page} \\
-	   \hline \multicolumn{1}{|c|}{\textbf{Time (s)}} &
-	   \multicolumn{1}{c|}{\textbf{Triple chosen}} &
-	   \multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
-	   \endhead
-	   
-	   \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
-	   \endfoot
-	   
-	   \hline
-	   \endlastfoot
-	   
-	   0 & (1, 11, 13725) & (1, 12, 10980), (1, 13, 8235), (2, 2, 0), (3, 1, 0) \\
-	   2745 & (1, 12, 10980) & (1, 13, 8235), (2, 2, 0), (2, 3, 0), (3, 1, 0) \\
-	   5490 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   8235 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   10980 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   13725 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   16470 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   19215 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   21960 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   24705 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   27450 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   30195 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   32940 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   35685 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   38430 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   41175 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   43920 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   46665 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   49410 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   52155 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   54900 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   57645 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   60390 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   63135 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   65880 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   68625 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   71370 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   74115 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   76860 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   79605 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   82350 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   85095 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   87840 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   90585 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   93330 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   96075 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   98820 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   101565 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   104310 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   107055 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   109800 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   112545 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   115290 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   118035 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   120780 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   123525 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   126270 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   129015 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   131760 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	\end{longtable}
-
-\section{Tablas de ingeniería}
-
-\begin{userstory}[tb:prueba]
-	\storyname{Cargar archivo}
-	\storyuser{Especialista}
-	\storyiter{1}
-	\storypriority{Alta}
-	\storyrisk{Bajo}
-	\storypoints{0.8}
-	\storyprogrammer{Ernesto Gil Capote}
-	\storydescription{
-	Permite cargar los datos de los casos de estudio a utilizar en el módulo con el objetivo de determinar secuencias factibles. Estos están almacenados en archivos con extensión .asp. La estructura está compuesta por los parámetros de entrada de la aplicación para cada caso de estudio tales como: dimensión, nombre de la estructura mecánica, cantidad de piezas, la MD correspondiente y el vector de herramientas en caso de que lo posea.
-	\begin{itemize}
-	\item rojo
-	\item blanco
-	\end{itemize}
-	}
-	\storyobservation{En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicación. Si se introduce un archivo que contiene caracteres no válidos o falta alguno de los elementos necesarios para la ejecución del módulo, este debe lanzar la excepción correspondiente.En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicación. Si se introduce un archivo que contiene caracteres no válidos o falta alguno de los elementos necesarios para la ejecución del módulo, este debe lanzar la excepción correspondiente.}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-Esta es referencia a una tabla de historia de usuario \ref{tb:prueba}
-
-\begin{crccard}[tablacrc3]
-\crcclass{AlgoritmoGenetico}
-\crcresp
-{
-	\begin{itemize}
-	\item Crear el conjunto de genes necesarios para la creación de un individuo
-	\item Realizar el proceso de mutación y recombinación
-	\item Crear el conjunto de genes necesarios para la creación de un individuo
-	\item Realizar el proceso de mutación y recombinación
-	\end{itemize}
-}
-\crccolab
-{
-	Población\\
-	OperadorProbabilidad\\
-	OperadorParejas\\
-	OperadorReproducion\\
-	Población
-}
-\end{crccard}
-
-\begin{crccard}[tablacrc2]
-\crcclass{AlgoritmoGenetico}
-\crcresp
-{
-	\begin{itemize}
-	\item Crear el conjunto de genes necesarios para la creación de un individuo
-	\item Realizar el proceso de mutación y recombinación
-	\item Crear el conjunto de genes necesarios para la creación de un individuo
-	\item Realizar el proceso de mutación y recombinación
-	\end{itemize}
-}
-\crccolab
-{
-	Población\\
-	OperadorProbabilidad\\
-	OperadorParejas\\
-	OperadorReproducion\\
-	Población
-}
-\end{crccard}
-
-
-\begin{effortestimation}[tb:est1]
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2}
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[4]{Graficar secuencias de ensamble}{0.1} 
-	\addentry[4]{Graficar ensamble}{0.1} 
-	\addentry[3]{Determinar Secuencia de Ensamble}{0.5} 
-	\addentry[1]{Cargar Archivo}{0.8} 
-	\addentry[1]{Determinar Secuencia de Ensamble}{0.2} 
-	\addentry[1]{Gestionar restricción cambios de herramienta}{0.5} 
-	\addentry[1]{Graficar secuencias de ensamble}{0.6} 
-\end{effortestimation}
+Una vez definidas las HU y realizada una previa estimación de esfuerzos, se procede a la planificación de
+la etapa de implementación del sistema. En este espacio, se crea el plan de iteraciones, donde se especifica
+la prioridad con que se implementarán las HU organizadas por iteraciones. Teniendo en cuenta el esfuerzo
+asociado a las HU y a las prioridades del cliente, se define una versión que sea de valor para este.
 
 \begin{effortestimation}
 	\addentry[4]{Graficar secuencias de ensamble}{1.1}  
@@ -400,89 +160,142 @@ Esta es referencia a una tabla de historia de usuario \ref{tb:prueba}
 	\addentry[1]{Esta es la prueba para el tinguiri}{0.5} 
 \end{effortestimation}
 
-Esto es una prueba de Tabla \ref{tb:est1}
 
-\begin{iterationplan}[tb:iterdurationtest]
-\setiterresult{1}{3} % in case an iteration takes a different time than the one calculated
+\subsection{Plan de duración de las iteraciones}
 
-\end{iterationplan}
+A continuación, se presenta el plan de duración de las iteraciones. Este plan, tiene como finalidad, mostrar
+la duración de cada iteración, así como el orden en que serán implementadas las HU en cada iteración como
+se muestra en la tabla siguiente:
 
-%\geniterdurationplan[tb]{}
+\geniterationplan
 
-Esto es una prueba de Tabla \ref{tb:iterdurationtest}
+\subsection{Plan de entregas}
 
-\begin{engineeringtask}[tb:engtask]
-\engtaskuserstory{4}
-\engtaskname{Registrar usuario}
-\engtasktype{Registarse}
-\engtaskpointestimation{1}
-\engtaskstartdate{6}{5}{2014} % day, month, year
-\engtaskenddate{24}{10}{2014}
-\engtaskdescription{El usuario introduce sus datos para poder registrarse.}
-%\engtaskprogrammer{Alberto Medina Ramírez}
-\end{engineeringtask}
+En el plan de entrega que se plantea a continuación, se hace una propuesta de las versiones (releases) del sistema. Cada versión se conformará al finalizar una iteración.
 
-\begin{developmenttask}[tb:devtask1]
-\devtaskuserstory{4}
-\devtaskname{Registrar usuario}
-\devtasktype{Registarse}
-\devtaskpointestimation{1}
-\devtaskstartdate{6}{5}{2014} % day, month, year
-\devtaskenddate{24}{10}{2014}
-\devtaskdescription{El usuario introduce sus datos para poder registrarse.}
-\devtaskprogrammer{Alberto Medina Ramírez}
-\end{developmenttask}
+\section{Fase II: Diseño del sistema}
 
-\begin{developmenttask}[tb:devtask2]
-\devtaskuserstory{4}
-\devtaskname{Registrar usuario}
-\devtasktype{Registarse}
-\devtaskpointestimation{1}
-\devtaskstartdate{6}{5}{2014} % day, month, year
-\devtaskenddate{24}{10}{2014}
-\devtaskdescription{El usuario introduce sus datos para poder registrarse.}
-%\devtaskprogrammer{Alberto Medina Ramírez}
-\end{developmenttask}
+La plataforma se implementó siguiendo los principios del patrón arquitectónico MVT
+La arquitectura Modelo-Vista-Template (MVT) es un patrón de arquitectura de software utilizado por Django. Es una variante del patrón Modelo-Vista-Controlador (MVC) y se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación.
+El patrón MVT se divide en tres componentes principales:
 
-\begin{engineeringtask}[tb:engtask1]
-\engtaskuserstory{4}
-\engtaskname{Registrar usuario}
-\engtasktype{Registarse}
-\engtaskpointestimation{1}
-\engtaskstartdate{6}{1}{2014} % day, month, year
-\engtaskenddate{24}{11}{2014}
-\engtaskdescription{El usuario introduce sus datos para poder registrarse.}
-\engtaskprogrammer{Alberto Medina Ramírez}
-\end{engineeringtask}
+\begin{itemize}
+	\item Modelo: El modelo es responsable de manejar los datos y la lógica de negocio de la aplicación. En otras palabras, el modelo es el encargado de interactuar con la base de datos y proporcionar los datos necesarios a la vista.
+	\item Vista: La vista es responsable de presentar los datos al usuario final. En otras palabras, la vista es el encargado de manejar las interfaces gráficas y proporcionar información dinámica al usuario.
+	\item 	Plantilla: La plantilla es responsable de definir cómo se presentan los datos en la vista. En otras palabras, el template define cómo se estructura y se muestra la información en la GUI.
+\end{itemize}
 
-Referencia \ref{tb:devtask1}
+El patrón MVT es una arquitectura de diseño que se utiliza para crear aplicaciones web eficientes y escalables. La separación de responsabilidades en los componentes del patrón permite que cada uno cumpla una función clara y definida, lo que facilita su mantenimiento y escalabilidad en el futuro. La reutilización de código, ya que, al separar las diferentes responsabilidades en componentes individuales, el código se puede escribir una vez y reutilizar en diferentes partes de la aplicación. Esto reduce el tiempo y el costo del desarrollo, y hace que el proceso de programación sea más eficiente.
 
-\begin{acceptancetest}[tb:expresult]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
-\testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contraseña deben ser válidos.
+
+\section{Patrones de diseño}
+
+
+Los patrones de diseño, tratan los problemas que se repiten y que se presentan en situaciones particulares
+del diseño, con el fin de proponer soluciones a ellas. Se encargan de identificar clases, instancias, roles,
+colaboraciones entres estas, así como la distribución de responsabilidades. En resumen,
+es una descripción de clases y objetos comunicándose entre sí, adaptada para resolver un problema de diseño
+general en un contexto particular.
+
+\subsection{Patrones \ac{GRASP}}
+
+\ac{GRASP} son un conjunto de patrones de diseño de software orientado a objetos que se enfocan en asignar responsabilidades de manera adecuada a las clases y objetos en un sistema. Los patrones de diseño \ac{GRASP} proporcionan un enfoque práctico para el diseño orientado a objetos y se pueden aplicar a diferentes etapas del ciclo de vida del software, desde la planificación hasta la implementación. Estos patrones de diseño pueden ayudar a mejorar el modularidad, la reutilización, la flexibilidad y la mantenibilidad del software, al tiempo que reducen la complejidad y el acoplamiento entre las clases.
+
+Patrones de diseño \ac{GRASP}:
+
+\begin{itemize}
+	\item Controlador: maneja las solicitudes entrantes y enviar las respuestas correspondientes a los clientes. El controlador en Django se evidencia a través de una vista y en la configuración de las rutas URL, permitiendo una asignación efectiva de responsabilidades en la gestión de solicitudes y lógica de la aplicación. 
+	\item Creador: Django utiliza Creator para crear objetos de modelo. ORM de Django se encarga de crear objetos de modelo y mapearlos a la base de datos. La creación de instancias es unas de las actividades más comunes en un sistema orientado a objetos. El patrón se hace evidente en las clases contenidas dentro del archivo View.py, las cuales tienen la responsabilidad de instanciar los objetos creados con cada sistema de configuración básica.
+	\item Experto: Django utiliza Expert para asignar responsabilidades de manera adecuada a las clases. En Django, las vistas son responsables de manejar las solicitudes entrantes y las plantillas son responsables de generar las respuestas HTML. Este patron se encuentra aplicado en todas las clases del archivo Models.py.
+	\item	Alta Cohesión: cada elemento del diseño debe realizar una labor única dentro del sistema, no desempeñada por el resto de los elementos y auto identificable. Este patrón está representado en las clases contenidas dentro del archivo View.py, las cuales tienen una única responsabilidad que puede ser CreateView, UpdateView o DeleteView.
+	
+\end{itemize}
+
+\subsection{Patrones \ac{GoF}}
+
+Los patrones de diseño \ac{GoF}) son un conjunto de patrones de diseño de software orientado a objetos. Estos patrones de diseño se han convertido en un conjunto clásico de patrones de diseño y son ampliamente utilizados en el diseño y desarrollo de sistemas de software orientados a objetos. Proporcionan soluciones probadas y efectivas para problemas comunes de diseño de software orientado a objetos. Cada patrón describe un problema de diseño específico y proporciona una solución general que se puede aplicar a diferentes situaciones.
+
+Patrones de diseño \ac{GoF}:
+
+\begin{itemize}
+	\item Decorador: agrega funcionalidades adicionales a las vistas. Django utiliza este patrón para la creación de vistas personalizadas y middleware, permitiendo agregar funcionalidad adicional a las vistas o el procesamiento de solicitudes sin modificar su código principal como la autenticación, caché, compresión.
+\end{itemize}
+
+
+Una vez definidos los patrones de diseño, se describen las clases utilizadas en la solución. Siguiendo la metodología XP, se analizan las HU y se descomponen en tareas independientes.
+
+\section{Tarjetas \ac{CRC}}
+
+A continuación, las HU son evaluadas para dividirlas en tareas, cada tarea representa una característica distinta del sistema y se puede diseñar una prueba de unidad que verifique cada tarea, estas tareas se
+representan por medio de las tarjetas \ac{CRC}.
+
+
+\begin{figure}[!htb]
+	\centering
+	\captionbox{Prototipo de Tarjeta \ac{CRC}\label{fig:crc}}
+	{\includegraphics[width=0.7\linewidth]{Images/crc}}
+\end{figure}
+
+Como se puede observar en la Figura 2.2, cada tarjeta contiene el nombre de la clase, una descripción de
+las responsabilidades o métodos asociados con la clase, así como la lista de las clases con que se relaciona
+o que colaboran con ella. A continuación se describen las tarjetas definidas para la implementación de la
+solución.
+
+\begin{crccard}[tb:mytable]
+	\crcclass{RegistroUsuario}
+	\crcresp{
+		\begin{itemize}
+			\item Recibir y validar la información del usuario para el registro.
+			\item Almacenar la información del usuario en la base de datos.
+			\item Enviar un correo electrónico de confirmación al usuario registrado.
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item BaseDeDatos: para almacenar la información del usuario.
+			\item ServicioDeCorreo: para enviar el correo electrónico de confirmación.
+		\end{itemize}
+	}
+\end{crccard}
+
+
+\begin{crccard}[tb:mytable]
+	\crcclass{IniciarSesion}
+	\crcresp{
+	\begin{itemize}
+		\item Autenticar al usuario utilizando su correo electrónico y contraseña.
+		\item Mantener la sesión activa mientras el usuario navega por la aplicación.
+		\item Redirigir al usuario a la página principal después de iniciar sesión correctamente.
+	\end{itemize}
 }
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-válidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
-\end{acceptancetest}
-
-\begin{acceptancetest}[tb:expresultaa]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
-\testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contraseña deben ser válidos.
+\crccolab{
+	\begin{itemize}
+		\item BaseDeDatos: para verificar las credenciales del usuario.
+		\item InterfazDeUsuario: para mostrar mensajes de error en caso de credenciales incorrectas.
+	\end{itemize}
 }
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-válidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
-\end{acceptancetest}
+\end{crccard}
 
-Prueba de link \ref{tb:expresult}
+\clearpage
+
+\begin{crccard}[tb:mytable]
+	\crcclass{GestionPerfilesUsuario}
+	\crcresp{
+	\begin{itemize}
+		\item Mostrar una lista de todos los usuarios registrados.
+		\item Permitir al administrador crear, editar y eliminar perfiles de usuario.
+		\item Implementar controles de acceso para garantizar la seguridad de las operaciones de gestión de perfiles.
+	\end{itemize}
+}
+\crccolab{
+	\begin{itemize}
+		\item BaseDeDatos: para acceder y actualizar la información de los perfiles de usuario.
+		\item InterfazDeAdministrador: para mostrar la lista de usuarios y proporcionar opciones de edición y eliminación.
+	\end{itemize}
+}
+\end{crccard}
+
+\section{Conclusiones del capítulo}
+
+En este capítulo se han abordado los aspectos referentes a la concepción del producto a desarrollar y sus
+características funcionales. Esto permitió arribar a las siguientes conclusiones:

@@ -16,38 +16,66 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Herramientas y tecnolog\IeC {\'\i }a de desarrollo de software}{5}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Secci\'on de prueba de la UCI}{7}{section.1.6}
+\contentsline {chapter}{\numberline {2}Caracter\IeC {\'\i }sticas y dise\~no del sistema}{8}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Propuesta de soluci\'on}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introducci\'on al cap\IeC {\'\i }tulo}{8}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Introducci\'on al cap\IeC {\'\i }tulo}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Propuesta de soluci\'on}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Propuesta de soluci\'on}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Fase I: Planificaci\'on}{9}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Fase I: Planificaci\'on}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Historias de Usuarios}{9}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Secci\'on de prueba}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.2}Estimaci\'on de esfuerzo por Historia de Usuario}{12}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Ejemplos de c\'odigo fuente}{14}{section.2.5}
+\contentsline {subsection}{\numberline {2.3.3}Desarrollo del plan de iteraciones}{12}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Ejemplo de tabla grande}{20}{chapter.3}
+\contentsline {subsection}{\numberline {2.3.4}Plan de duraci\'on de las iteraciones}{13}{subsection.2.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Tabla aleatoria}{20}{section.3.1}
+\contentsline {subsection}{\numberline {2.3.5}Plan de entregas}{13}{subsection.2.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Tablas de ingenier\IeC {\'\i }a}{21}{section.3.2}
+\contentsline {section}{\numberline {2.4}Fase II: Dise\~no del sistema}{13}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Resultados}{26}{chapter.4}
+\contentsline {section}{\numberline {2.5}Patrones de dise\~no}{14}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusiones}{27}{chapter*.17}
+\contentsline {subsection}{\numberline {2.5.1}Patrones \ac {GRASP}}{14}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Recomendaciones}{28}{chapter*.19}
+\contentsline {subsection}{\numberline {2.5.2}Patrones \ac {GoF}}{15}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ap\'endices}{29}{section*.20}
+\contentsline {section}{\numberline {2.6}Tarjetas \ac {CRC}}{15}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Proyectos y Avales}{30}{appendix.Alph1}
+\contentsline {section}{\numberline {2.7}Conclusiones del cap\IeC {\'\i }tulo}{17}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Otro reporte}{31}{appendix.Alph2}
+\contentsline {chapter}{\numberline {3}Implementaci\'on y prueba del sistema}{18}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Otra secci\'on de muestra}{31}{section.Alph2.1}
+\contentsline {section}{\numberline {3.1}Introducci\'on al cap\IeC {\'\i }tulo}{18}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Otro ensamble Industrial}{31}{section.Alph2.2}
+\contentsline {section}{\numberline {3.2}Fase III: Desarrollo}{18}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Tareas de ingenier\IeC {\'\i }a}{18}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Tareas de ingenier\IeC {\'\i }a para la Iteraci\'on I}{19}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Tareas de ingenier\IeC {\'\i }a para la Iteraci\'on II}{19}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}Tareas de ingenier\IeC {\'\i }a para la Iteraci\'on III}{19}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Fase IV: Pruebas}{19}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Pruebas de aceptaci\'on}{19}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}Pruebas de aceptaci\'on para la Iteraci\'on I}{20}{subsection.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}Pruebas de aceptaci\'on para la Iteraci\'on II}{20}{subsection.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.3}Pruebas de aceptaci\'on para la Iteraci\'on III}{20}{subsection.3.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.4}An\'alisis de las pruebas de aceptaci\'on}{20}{subsection.3.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Conclusiones del cap\IeC {\'\i }tulo}{20}{section.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusiones}{21}{chapter*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Recomendaciones}{22}{chapter*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Ap\'endices}{23}{section*.20}

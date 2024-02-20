@@ -11,6 +11,34 @@ desarrollar.
 
 \section{Sistema de gestión de citas y servicios}
 
+\begin{table}[h]
+	\centering
+	\captionbox{Roles del sistema\label{Roles}}
+	{
+		\begin{tabular}{|p{1cm}|p{5cm}|}
+			\hline \textbf{Roles} & \textbf{Interacción en Medicando} \\ \hline
+			Administrador & Configuración y mantenimiento del sistema de gestión de citas y servicios de legalización. 
+			Gestión de usuarios y asignación de roles y permisos.
+			Supervisión del funcionamiento general del sistema y resolución de problemas técnicos.
+			Actualización de información relevante, como horarios disponibles y servicios ofrecidos.  \\ \hline
+			Cliente & Solicitar servicios legales y programar citas con abogados.
+			Proporcionar la documentación necesaria para los procesos de legalización.
+			Confirmar asistencia a las citas programadas y seguir las instrucciones proporcionadas por el bufete.
+			 \\ \hline
+			Legalizadora & Coordinar y llevar a cabo los procesos de legalización de documentos ante las autoridades correspondientes.
+			Verificar la autenticidad y validez de los documentos presentados para su legalización.
+			Mantener registros precisos de los documentos procesados y su estado actual.
+			Comunicarse con clientes y autoridades pertinentes para resolver cualquier problema o solicitud relacionada con la legalización.  \\ \hline
+			Registradora & Gestionar los registros de citas programadas, canceladas y reprogramadas.
+			Actualizar la disponibilidad de horarios en el sistema según las citas programadas.
+			Coordinar con el personal administrativo para garantizar una facturación precisa de los servicios prestados.
+			Proporcionar asistencia a los clientes en el proceso de programación de citas y en la resolución de problemas relacionados con la agenda.  \\
+			\hline 
+		\end{tabular}
+	}
+\end{table}
+
+
 \section{Sistemas Homólogos}
 
 \section{Metodología de desarrollo de software}
@@ -40,16 +68,16 @@ tecnología \citep{joskowicz2008reglas}.
 
 \section{Herramientas y tecnología de desarrollo de software}
 
-La elección y uso de herramientas y tecnologías apropiadas es crucial para el éxito del desarrollo del sistema de gestión de citas y servicios de Transconsul \ac{XP}. Al evaluar y seleccionar cuidadosamente estas herramientas, los programadores pueden trabajar de manera más eficiente y efectiva, lo que a su vez se traducirá en un producto final de alta calidad. Por lo tanto, es importante llevar a cabo una investigación exhaustiva de las herramientas y tecnologías disponibles, con el fin de identificar aquellas que mejor se adapten a las necesidades específicas del proyecto. De esta manera, se puede garantizar que el equipo de desarrollo tenga acceso a las herramientas y tecnologías necesarias para trabajar de manera efectiva y lograr los objetivos del proyecto de manera satisfactoria.
+La elección y uso de herramientas y tecnologías apropiadas es crucial para el éxito del desarrollo del sistema de gestión de citas y servicios de Transconsul \ac{S.A.}. Al evaluar y seleccionar cuidadosamente estas herramientas, los programadores pueden trabajar de manera más eficiente y efectiva, lo que a su vez se traducirá en un producto final de alta calidad. Por lo tanto, es importante llevar a cabo una investigación exhaustiva de las herramientas y tecnologías disponibles, con el fin de identificar aquellas que mejor se adapten a las necesidades específicas del proyecto. De esta manera, se puede garantizar que el equipo de desarrollo tenga acceso a las herramientas y tecnologías necesarias para trabajar de manera efectiva y lograr los objetivos del proyecto de manera satisfactoria.
 
 \begin{itemize}
 	\item Marco de trabajo: Con Django, puedes llevar aplicaciones web desde el concepto hasta el lanzamiento en cuestión de horas. Django se encarga de gran parte de las molestias del desarrollo web, por lo que puedes concentrarte en escribir tu aplicación sin necesidad de reinventar la rueda. Es gratuito y de código abierto.
 	
 	\begin{itemize}
 		\item Completamente cargado:
-		Django incluye docenas de extras que puedes usar para manejar tareas comunes de desarrollo web. Django se encarga de la autenticación de usuarios, la administración de contenidos, los mapas del sitio, las fuentes RSS y muchas más tareas, desde el primer momento.
+		Django incluye docenas de extras que puedes usar para manejar tareas comunes de desarrollo web. Django se encarga de la autenticación de usuarios, la administración de contenidos, los mapas del sitio, las fuentes \ac{RSS} y muchas más tareas, desde el primer momento.
 		\item Tranquilamente seguro:
-		Django se toma en serio la seguridad y ayuda a los desarrolladores a evitar muchos errores de seguridad comunes, como la inyección SQL, secuencias de comandos entre sitios, falsificación de solicitudes entre sitios y clickjacking. Su sistema de autenticación de usuarios proporciona una forma segura de administrar cuentas de usuarios y contraseñas.
+		Django se toma en serio la seguridad y ayuda a los desarrolladores a evitar muchos errores de seguridad comunes, como la inyección \ac{SQL}, secuencias de comandos entre sitios, falsificación de solicitudes entre sitios y clickjacking. Su sistema de autenticación de usuarios proporciona una forma segura de administrar cuentas de usuarios y contraseñas.
 		\item Extremadamente escalable:
 		Algunos de los sitios más concurridos del planeta utilizan la capacidad de Django para escalar de forma rápida y flexible para satisfacer las demandas de tráfico más intensas.
 		\item Increíblemente versátil:
@@ -57,7 +85,7 @@ La elección y uso de herramientas y tecnologías apropiadas es crucial para el éx
 	\end{itemize}
 	
 	
-	\item Entorno de desarrollo: Visual Studio Code es un editor de código fuente liviano pero potente que se ejecuta en su escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para JavaScript, TypeScript y Node.js y tiene un rico ecosistema de extensiones para otros lenguajes y tiempos de ejecución (como C++, Java, Python, PHP, Go, .NET)   \\
+	\item Entorno de desarrollo: Visual Studio Code es un editor de código fuente liviano pero potente que se ejecuta en su escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para JavaScript, TypeScript y Node.js y tiene un rico ecosistema de extensiones para otros lenguajes y tiempos de ejecución (como C++, Java, C\#, Python, PHP, Go, .NET)   \\
 	Un 'entorno' en Python es el contexto en el que se ejecuta un programa Python que consta de un intérprete y cualquier cantidad de paquetes instalados. \\
 	
 	El venv módulo admite la creación de "entornos virtuales" livianos, cada uno con su propio conjunto independiente de paquetes Python instalados en sus sitedirectorios. Un entorno virtual se crea sobre una instalación de Python existente, conocida como Python ?base? del entorno virtual, y opcionalmente puede aislarse de los paquetes en el entorno base, de modo que solo estén disponibles aquellos instalados explícitamente en el entorno virtual. \\
@@ -75,44 +103,4 @@ La elección y uso de herramientas y tecnologías apropiadas es crucial para el éx
 	existencia de una nutrida y activa comunidad \citep{gilfillan_biblia_2003}.
 \end{itemize}
 
-
-
-Escribir aquí el capítulo 1. Ejemplo de acrónimo es la \ac{UCI}. Esto es una cita de ejemplo \citep{Ou2013}. En la próxima oración se muestra un ejemplo de un acrónimo en inglés. Los sistemas de \ac{SCADA} son de gran importancia para la industria. 
-
-\section{Sección de prueba de la \glsentrytext{UCI}} % example on how tu use glossaries or acronym in sections or another moving argument
-
-
-Esto es una utilización de una palabra del glosario. El término \gls{Engine} es utilizado en \ul{este} ejemplo. Esta es una prueba de número: $5.3$ donde se utiliza la coma automáticamente como separador.
-
-Esto es una cita de ejemplo \citep{Alfadhlani2011,Mathew2010}.
-
-\begin{figure}[!htb]
-\centering
-\captionbox{Vista del Arco de Moncloa\label{fig:DSC00461}}
-{\includegraphics[width=0.7\linewidth]{Images/DSC00461}}
-\end{figure}
-
-En la Tabla \ref{Prueba} se observa \dots\\
-
-\begin{table}[!h]
-\centering
-\captionbox{Caption de Prueba\label{Prueba}}
-{
-	\begin{tabular}{lllll}
-	\hline \textbf{No. 1} & \textbf{No. 2} & \textbf{No. 3} & \textbf{No. 4} & \textbf{No. 5}\\ \hline
-	12 & 12 & 56 & 56 &  56 \\ 
-	12 & 12 & 56 & 56 &  56 \\
-	\hline 
-	\end{tabular}
-}
-\end{table}
-
-
-\begin{itemize}
-\item Uno
-\item Dos
-\item Tres
-\item Cuatro
-\item Cinco
-\end{itemize}
 
