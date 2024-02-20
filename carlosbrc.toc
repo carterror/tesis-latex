@@ -10,9 +10,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Sistema de gesti\'on de citas y servicios}{4}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Sistemas Hom\'ologos}{4}{section.1.3}
+\contentsline {section}{\numberline {1.3}Sistemas Hom\'ologos}{5}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Metodolog\IeC {\'\i }a de desarrollo de software}{4}{section.1.4}
+\contentsline {section}{\numberline {1.4}Metodolog\IeC {\'\i }a de desarrollo de software}{5}{section.1.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Herramientas y tecnolog\IeC {\'\i }a de desarrollo de software}{5}{section.1.5}
 \defcounter {refsection}{0}\relax 
@@ -74,8 +74,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Conclusiones del cap\IeC {\'\i }tulo}{20}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusiones}{21}{chapter*.17}
+\contentsline {chapter}{Conclusiones}{21}{chapter*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Recomendaciones}{22}{chapter*.19}
+\contentsline {chapter}{Recomendaciones}{22}{chapter*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ap\'endices}{23}{section*.20}
+\contentsline {chapter}{Ap\'endices}{23}{section*.19}
