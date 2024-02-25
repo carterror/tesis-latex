@@ -36,18 +36,12 @@ en conjunto con el cliente. Una entrega debería obtenerse en no más de tres mese
 
 \subsection{Historias de Usuarios}
 
-Las HU son la técnica que utiliza XP para especificar los requisitos de software, estas deben ser pro-
-gramadas en un tiempo entre una y tres semanas. Si la estimación es superior a las tres semanas, debe ser
-dividida en dos o más historias. Si es menos de una semana, se debe combinar con otra HU. Las estimaciones
-de esfuerzo, asociado a la implementación de las historias, la establecen los programadores, utilizando como
-medida el punto. Un punto, equivale a una semana ideal de programación (5 días laborables). Las historias,
-generalmente, valen de 1 a 3 puntos. \citep{escribano2002introduccion}. A continuación se describen las HU definidas
-parra llevar a cabo el desarrollo de los módulos.
+Las HU son la técnica que utiliza XP para especificar los requisitos de software, estas deben ser programadas en un tiempo entre una y tres semanas. Si la estimación es superior a las tres semanas, debe ser dividida en dos o más historias. Si es menos de una semana, se debe combinar con otra HU. Las estimaciones de esfuerzo, asociado a la implementación de las historias, la establecen los programadores, utilizando como medida el punto. Un punto, equivale a una semana ideal de programación (5 días laborables). Las historias, generalmente, valen de 1 a 3 puntos. \citep{escribano2002introduccion}. A continuación se describen las HU definidas parra llevar a cabo el desarrollo de los módulos.
 
 
 \begin{userstory}[tb:prueba]
 	\storyname{Registro de Usuario}
-	\storyuser{Administrador, Usuario}
+	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Bajo}
@@ -70,14 +64,34 @@ parra llevar a cabo el desarrollo de los módulos.
 			\item Se debe enviar un correo electrónico de confirmación al usuario registrado para verificar su dirección de correo electrónico.
 			\item El usuario debe poder iniciar sesión después de completar el registro exitosamente.
 		\end{itemize}
-		}
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+\begin{userstory}[tb:prueba]
+	\storyname{Registrar Usuario}
+	\storyuser{Administrador}
+	\storyiter{1}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de registrar usuario, donde se muestra una página con un formulario a rellenar con los siguientes datos.
+		\begin{itemize}
+			\item Nombre
+			\item Apellidos
+			\item Contraseña
+			\item Usuario
+		\end{itemize}
+	}	
+	\storyobservation{
+	}
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-
 \begin{userstory}[tb:prueba]
 	\storyname{Iniciar Sesión}
-	\storyuser{Administrador, Usuario}
+	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Bajo}
@@ -132,6 +146,420 @@ parra llevar a cabo el desarrollo de los módulos.
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
+\begin{userstory}[tb:prueba]
+	\storyname{Registrar Cita}
+	\storyuser{Cliente}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de registrar su cita, donde se muestra una página con un formulario a rellenar con los siguientes campos
+		\begin{itemize}
+			\item Nombre
+			\item Apellidos
+			\item Usuario
+			\item Contraseña
+			\item Dirección Particular
+			\item Ci
+			\item Teléfono de localización 
+			\item Cantidad de Documentos a Legalizar
+			\item Obtención de documentos
+		\end{itemize}
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Autenticar Usuario}
+	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
+	\storyiter{1}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de autenticarse en el sistema, donde se muestra una la página principal mediante estos campos.
+		\begin{itemize}
+			\item Usuario 
+			\item Contraseña
+		\end{itemize}
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Usuario}
+	\storyuser{Administrador}
+	\storyiter{1}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de modificar usuario, donde se muestra una página con un formulario con los datos que el usuario puede modificar los cuales son.
+		\begin{itemize}
+			\item Nombre
+			\item Apellidos
+			\item Usuario
+			
+		\end{itemize}
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Usuario}
+	\storyuser{Administrador}
+	\storyiter{1}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar usuario, donde se muestra una página con un mensaje de advertencia.
+		Estas seguro
+		¡No podrás revertir esto!
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Notificar via SMS
+\begin{userstory}[tb:prueba]
+	\storyname{Notificar via SMS}
+	\storyuser{Cliente}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario recibir una notificación a su teléfono móvil, sobre que la cita ha sido realizada de forma exitosa. Mostrando el siguiente texto.
+		Su cita ha sido programada para (fecha del dia de la cita) y lugar (dirección de la entidad)
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Crear Contrato
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Contrato}
+	\storyuser{Registradora}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Descripción:
+		Permite al usuario poder acceder a la opción de crear contrato, donde se muestra una página con el contrato previamente elaborado, mostrando los siguientes datos.
+		
+		\begin{itemize}
+			\item Datos generales del cliente (nombre y apellidos, ci)
+			\item Residente (dirección particular)
+			\item Teléfono de localización 
+			\item Beneficiario (nombre y apellidos)
+			\item Tipo y Cantidad de Documentos 
+			\item Codigo 
+			\item Sellos
+			\item Nombre y apellidos de la legalizadora que realiza el contrato 
+			\item Valor total del contrato
+			\item Valor de los sellos
+		\end{itemize}
+		
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Modificar Contrato
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Contrato}
+	\storyuser{Registradora}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de modificar contrato, donde se muestra una página con el contrato previamente elaborado, mostrando los siguientes datos.
+		
+		\begin{itemize}
+			\item Datos generales del cliente (nombre y apellidos, ci)
+			\item Residente (dirección particular)
+			\item Teléfono de localización 
+			\item Beneficiario (nombre y apellidos)
+			\item Tipo y Cantidad de Documentos 
+			\item Codigo 
+			\item Sellos
+			\item Nombre y apellidos de la legalizadora que realiza el contrato 
+			\item Valor total del contrato
+			\item Valor de los sellos
+		\end{itemize}
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Eliminar Contrato
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Contrato}
+	\storyuser{Legalizador}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar contrato, donde se muestra una página con un mensaje de advertencia.
+		Estas seguro
+		¡No podrás revertir esto!
+		
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Imprimir Contrato
+\begin{userstory}[tb:prueba]
+	\storyname{Imprimir Contrato}
+	\storyuser{Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de imprimir contrato 2 copias.
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Crear Tramite
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Tramite}
+	\storyuser{Administrador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de crear un trámite a realizar, donde se muestra una página con un formulario a rellenar con los siguientes datos:
+		
+		\begin{itemize}
+			\item Codigo
+			\item Descripcion
+			\item Precio
+		\end{itemize}
+		
+		
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Modificar  Tramite
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar  Tramite}
+	\storyuser{Administrador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de modificar un trámite a realizar, donde se muestra una página con un formulario con los siguientes datos:
+		
+		\begin{itemize}
+			\item Codigo
+			\item Descripcion
+			\item Precio
+		\end{itemize}
+		
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Eliminar Tramite
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar   Tramite}
+	\storyuser{Administrador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar , donde se muestra una página con un mensaje de advertencia.
+		Estas seguro
+		¡No podrás revertir esto!		
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Crear Prefactura
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Prefactura}
+	\storyuser{Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de crear una prefactura realizar, donde se muestra una página con un formulario a rellenar con los siguientes datos:
+		
+		\begin{itemize}
+			\item Codigo
+			\item Nombre
+			\item Orden de Trabajo
+			\item No
+			\item Fecha
+			\item Direccion
+		\end{itemize}
+		
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Modificar Prefactura
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Prefactura}
+	\storyuser{Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de modificar un trámite a realizar, donde se muestra una página con un formulario con los siguientes datos:
+		
+		\begin{itemize}
+			\item Codigo
+			\item Nombre
+			\item Orden de Trabajo
+			\item No
+			\item Fecha
+			\item Direccion
+		\end{itemize}
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Eliminar Prefactura
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Prefactura}
+	\storyuser{Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar Prefactura, donde se muestra una página con un mensaje de advertencia.
+		Estas seguro
+		¡No podrás revertir esto!
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Imprimir Prefactura
+\begin{userstory}[tb:prueba]
+	\storyname{Imprimir Prefactura}
+	\storyuser{Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de imprimir la prefactura.
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Solicitar Cita al notario
+\begin{userstory}[tb:prueba]
+	\storyname{Solicitar Cita al notario}
+	\storyuser{Cliente}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de solicitar una cita, donde se muestra una página con un formulario a rellenar con los siguientes campos:
+		
+		\begin{itemize}
+			\item Nombre
+			\item Apellidos
+			\item Dirección Particular
+			\item Ci
+			\item Teléfono de localización 
+			\item Motivo por el cual Solicita la cita
+		\end{itemize}
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+% Aceptar Cita
+\begin{userstory}[tb:prueba]
+	\storyname{Aceptar Cita}
+	\storyuser{Notario}
+	\storyiter{1.5}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de Aceptar Cita, donde se muestra una página con un mensaje de advertencia.
+		Estas seguro
+		¡Esta acción sera notificada al cliente!
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
 \subsection{Estimación de esfuerzo por Historia de Usuario}
 
 Se realiza la estimación de esfuerzo que arroja cada HU, con el objetivo de obtener un correcto desarrollo
@@ -147,16 +575,27 @@ la prioridad con que se implementarán las HU organizadas por iteraciones. Tenien
 asociado a las HU y a las prioridades del cliente, se define una versión que sea de valor para este.
 
 \begin{effortestimation}
-	\addentry[4]{Graficar secuencias de ensamble}{1.1}  
-	\addentry[3]{Determinar Secuencia de Ensamble}{2.5}  
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[1]{Cargar Fichero}{0.8} 
-	\addentry[1]{Determinar Secuencia de Ensamble}{0.2} 
-	\addentry[1]{Gestionar restricción cambios de herramienta}{0.5} 
-	\addentry[1]{Esta es la prueba para el tinguiri}{0.5} 
+	\addentry[1]{Iniciar Sesión}{1}
+	\addentry[1]{Gestión de Perfiles de Usuario}{1}
+	\addentry[1]{Registrar Cita}{1}
+	\addentry[1]{Autenticar Usuario}{1}
+	\addentry[1]{Modificar Usuario}{1}
+	\addentry[1]{Registrar Usuario}{1}
+	\addentry[1]{Eliminar Usuario}{1}
+	\addentry[2]{Notificar vía SMS}{1}
+	\addentry[2]{Crear Contrato}{1}
+	\addentry[2]{Modificar Contrato}{1}
+	\addentry[2]{Eliminar Contrato}{1}
+	\addentry[2]{Imprimir Contrato}{1}
+	\addentry[3]{Crear Tramite}{1}
+	\addentry[3]{Modificar Tramite}{1}
+	\addentry[3]{Eliminar Tramite}{1}
+	\addentry[3]{Crear Prefactura}{1}
+	\addentry[3]{Modificar Prefactura}{1}
+	\addentry[3]{Eliminar Prefactura}{1}
+	\addentry[3]{Imprimir Prefactura}{1}
+	\addentry[4]{Solicitar Cita al notario}{1}
+	\addentry[4]{Aceptar Cita}{1}
 \end{effortestimation}
 
 
