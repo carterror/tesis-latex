@@ -614,13 +614,13 @@ En el plan de entrega que se plantea a continuación, se hace una propuesta de la
 \section{Fase II: Diseño del sistema}
 
 La plataforma se implementó siguiendo los principios del patrón arquitectónico MVT
-La arquitectura Modelo-Vista-Template (MVT) es un patrón de arquitectura de software utilizado por Django. Es una variante del patrón Modelo-Vista-Controlador (MVC) y se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación.
+La arquitectura Modelo-Vista-Template (MVT) es un patrón de arquitectura de software utilizado por Django. Es una variante del patrón Modelo-Vista-Controlador (MVC) y se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación \citep{Sarmiento2019}.
 El patrón MVT se divide en tres componentes principales:
 
 \begin{itemize}
 	\item Modelo: El modelo es responsable de manejar los datos y la lógica de negocio de la aplicación. En otras palabras, el modelo es el encargado de interactuar con la base de datos y proporcionar los datos necesarios a la vista.
-	\item Vista: La vista es responsable de presentar los datos al usuario final. En otras palabras, la vista es el encargado de manejar las interfaces gráficas y proporcionar información dinámica al usuario.
-	\item 	Plantilla: La plantilla es responsable de definir cómo se presentan los datos en la vista. En otras palabras, el template define cómo se estructura y se muestra la información en la GUI.
+	\item Vista: La vista es responsable de presentar los datos al usuario final. En otras palabras, la vista es el encargado de manejar las interfaces gráficas y proporcionar información dinámica al usuario \citep{rafaelD2021}.
+	\item 	Plantilla: La plantilla es responsable de definir cómo se presentan los datos en la vista. En otras palabras, el template define cómo se estructura y se muestra la información en la GUI \citep{Sarmiento2019}.
 \end{itemize}
 
 El patrón MVT es una arquitectura de diseño que se utiliza para crear aplicaciones web eficientes y escalables. La separación de responsabilidades en los componentes del patrón permite que cada uno cumpla una función clara y definida, lo que facilita su mantenimiento y escalabilidad en el futuro. La reutilización de código, ya que, al separar las diferentes responsabilidades en componentes individuales, el código se puede escribir una vez y reutilizar en diferentes partes de la aplicación. Esto reduce el tiempo y el costo del desarrollo, y hace que el proceso de programación sea más eficiente.
@@ -637,7 +637,7 @@ general en un contexto particular.
 
 \subsection{Patrones \ac{GRASP}}
 
-\ac{GRASP} son un conjunto de patrones de diseño de software orientado a objetos que se enfocan en asignar responsabilidades de manera adecuada a las clases y objetos en un sistema. Los patrones de diseño \ac{GRASP} proporcionan un enfoque práctico para el diseño orientado a objetos y se pueden aplicar a diferentes etapas del ciclo de vida del software, desde la planificación hasta la implementación. Estos patrones de diseño pueden ayudar a mejorar el modularidad, la reutilización, la flexibilidad y la mantenibilidad del software, al tiempo que reducen la complejidad y el acoplamiento entre las clases.
+\ac{GRASP} son un conjunto de patrones de diseño de software orientado a objetos que se enfocan en asignar responsabilidades de manera adecuada a las clases y objetos en un sistema. Los patrones de diseño \ac{GRASP} proporcionan un enfoque práctico para el diseño orientado a objetos y se pueden aplicar a diferentes etapas del ciclo de vida del software, desde la planificación hasta la implementación. Estos patrones de diseño pueden ayudar a mejorar el modularidad, la reutilización, la flexibilidad y la mantenibilidad del software, al tiempo que reducen la complejidad y el acoplamiento entre las clases \citep{CodeScouts2022}.
 
 Patrones de diseño \ac{GRASP}:
 
@@ -645,18 +645,18 @@ Patrones de diseño \ac{GRASP}:
 	\item Controlador: maneja las solicitudes entrantes y enviar las respuestas correspondientes a los clientes. El controlador en Django se evidencia a través de una vista y en la configuración de las rutas URL, permitiendo una asignación efectiva de responsabilidades en la gestión de solicitudes y lógica de la aplicación. 
 	\item Creador: Django utiliza Creator para crear objetos de modelo. ORM de Django se encarga de crear objetos de modelo y mapearlos a la base de datos. La creación de instancias es unas de las actividades más comunes en un sistema orientado a objetos. El patrón se hace evidente en las clases contenidas dentro del archivo View.py, las cuales tienen la responsabilidad de instanciar los objetos creados con cada sistema de configuración básica.
 	\item Experto: Django utiliza Expert para asignar responsabilidades de manera adecuada a las clases. En Django, las vistas son responsables de manejar las solicitudes entrantes y las plantillas son responsables de generar las respuestas HTML. Este patron se encuentra aplicado en todas las clases del archivo Models.py.
-	\item	Alta Cohesión: cada elemento del diseño debe realizar una labor única dentro del sistema, no desempeñada por el resto de los elementos y auto identificable. Este patrón está representado en las clases contenidas dentro del archivo View.py, las cuales tienen una única responsabilidad que puede ser CreateView, UpdateView o DeleteView.
+	\item	Alta Cohesión: cada elemento del diseño debe realizar una labor única dentro del sistema, no desempeñada por el resto de los elementos y auto identificable. Este patrón está representado en las clases contenidas dentro del archivo View.py, las cuales tienen una única responsabilidad que puede ser CreateView, UpdateView o DeleteView \citep{CodeScouts2022}.
 	
 \end{itemize}
 
 \subsection{Patrones \ac{GoF}}
 
-Los patrones de diseño \ac{GoF}) son un conjunto de patrones de diseño de software orientado a objetos. Estos patrones de diseño se han convertido en un conjunto clásico de patrones de diseño y son ampliamente utilizados en el diseño y desarrollo de sistemas de software orientados a objetos. Proporcionan soluciones probadas y efectivas para problemas comunes de diseño de software orientado a objetos. Cada patrón describe un problema de diseño específico y proporciona una solución general que se puede aplicar a diferentes situaciones.
+Los patrones de diseño \ac{GoF}) son un conjunto de patrones de diseño de software orientado a objetos. Estos patrones de diseño se han convertido en un conjunto clásico de patrones de diseño y son ampliamente utilizados en el diseño y desarrollo de sistemas de software orientados a objetos. Proporcionan soluciones probadas y efectivas para problemas comunes de diseño de software orientado a objetos. Cada patrón describe un problema de diseño específico y proporciona una solución general que se puede aplicar a diferentes situaciones \citep{gamma1994design}.
 
 Patrones de diseño \ac{GoF}:
 
 \begin{itemize}
-	\item Decorador: agrega funcionalidades adicionales a las vistas. Django utiliza este patrón para la creación de vistas personalizadas y middleware, permitiendo agregar funcionalidad adicional a las vistas o el procesamiento de solicitudes sin modificar su código principal como la autenticación, caché, compresión.
+	\item Decorador: agrega funcionalidades adicionales a las vistas. Django utiliza este patrón para la creación de vistas personalizadas y middleware, permitiendo agregar funcionalidad adicional a las vistas o el procesamiento de solicitudes sin modificar su código principal como la autenticación, caché, compresión \citep{Silva2019}.
 \end{itemize}
 
 
