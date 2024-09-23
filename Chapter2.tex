@@ -3,23 +3,30 @@
 
 \section{Introducción al capítulo}
 
-En el presente capítulo se presenta una propuesta de solución para los problemas detectados en el estudio
-del estado del arte realizado en el Capítulo 1. Se mencionan los roles que intervienen en la solución. También
-se definen las HU, la planificación de entrega de versiones del producto y el diseño del sistema de acuerdo a
-las fases que propone XP.
+En este capítulo se desarrolla la propuesta de solución tecnológica para enfrentar los problemas de gestión de servicios detectados en Transconsul \ac{S.A.}. A partir del análisis realizado en el capítulo anterior, se describe detalladamente el proceso de diseño del sistema, desde la definición de los módulos funcionales hasta la planificación de las entregas y las iteraciones de desarrollo. \\
+
+La solución propuesta se fundamenta en la implementación de un sistema modular que permite gestionar de manera eficiente las citas y servicios ofrecidos por la empresa. En primer lugar, se identifican los roles clave que interactuarán con el sistema, desde administradores hasta usuarios finales, asegurando que cada actor del proceso cuente con las herramientas necesarias para realizar sus funciones de manera efectiva. Seguidamente, se introducen las Historias de Usuario (HU), que definen de manera clara los requisitos del sistema y las funcionalidades esperadas, proporcionando una visión centrada en el usuario y facilitando la priorización de las tareas de desarrollo. \\
+
+Además, el capítulo abarca la planificación de las iteraciones, siguiendo los principios de la metodología ágil Extreme Programming (XP). Esto permite que el desarrollo del sistema sea flexible y adaptable a cambios en los requisitos o retroalimentación del cliente, garantizando la entrega de valor de manera continua. Se presenta un plan de iteraciones detallado que incluye la duración de cada fase, las HU asignadas y el esfuerzo estimado para cada tarea.\\
+
+Finalmente, se aborda el diseño técnico del sistema, que incluye tanto la arquitectura general como los patrones de diseño utilizados. Se emplean patrones GRASP y GoF, los cuales garantizan que el sistema sea escalable, mantenible y eficiente. Este enfoque modular asegura que la solución pueda crecer y adaptarse a las necesidades cambiantes de la empresa sin comprometer su estabilidad o rendimiento.\\
+
+Este capítulo ofrece una visión integral del diseño de la solución propuesta, asegurando que cada aspecto del desarrollo esté alineado con los objetivos de Transconsul S.A. y con las mejores prácticas en la creación de sistemas de gestión de servicios.\\
 
 \section{Propuesta de solución}
 
 Luego de haber analizado las necesidades del sistema y seleccionado las herramientas para la implementación, se definen los módulos a desarrollar para dar solución al problema planteado.
 
 \begin{itemize}
-	\item Autenticación y Autorización: Este módulo se encargaría de gestionar la autenticación de usuarios, el registro de cuentas y la autorización de acceso a diferentes partes de la aplicación.
-	\item Gestión de Citas: Este módulo sería el núcleo de la aplicación y se encargaría de permitir a los usuarios programar, modificar y cancelar citas. Debería incluir un calendario interactivo, notificaciones de citas programadas y recordatorios automáticos.
-	\item Gestión de Clientes: Aquí se manejaría toda la información relacionada con los clientes, incluyendo su perfil, historial de citas, documentos legalizados y cualquier otra información relevante.
-	\item Servicios Legales y Legalización: Este módulo se enfocaría en la gestión de los servicios legales ofrecidos por el bufete de abogados, así como en el proceso de legalización de documentos. Debería permitir a los usuarios solicitar servicios específicos, enviar documentos y realizar seguimiento del estado de sus trámites.
-	\item Comunicación y Notificaciones: Este módulo sería responsable de facilitar la comunicación entre el bufete de abogados y sus clientes, a través de mensajes directos, correos electrónicos o notificaciones automáticas sobre el estado de las citas y servicios solicitados.
-	\item Administración del Sistema: Este módulo sería utilizado por los administradores del sistema para gestionar usuarios, configurar ajustes de la aplicación, generar informes y realizar tareas de mantenimiento.
-	\item Análisis y Reportes: Este módulo se encargaría de recopilar datos sobre el uso de la aplicación, el rendimiento del sistema y la satisfacción del cliente, para generar informes y análisis que ayuden a mejorar la eficiencia y calidad del servicio.
+	\item Autenticación y Autorización: Este módulo se encargará de gestionar la autenticación de usuarios, el registro de cuentas y la autorización de acceso a diferentes partes de la aplicación.
+	\item Gestión de Citas: Este módulo será el núcleo de la aplicación y se encargará de permitir a los usuarios programar, aceptar y cancelar citas teniendo en cuenta la disponibilidad diaria de las mismas. Deberá incluir notificaciones de citas programadas y recordatorios automáticos.
+	\item Gestión de Clientes: Manejará toda la información relacionada con los clientes, incluyendo su perfil, historial de citas y otra información relevante.
+	\item Gestión de Reseñas: Permite a los usuarios dejar reseñas sobre su experiencia con el servicio, las cuales podrán ser visualizadas y gestionadas por el administrador.
+	\item Gestión de Trabajadores: Permite a los administradores gestionar la información de los trabajadores y una  reseña sobre ellos.
+	\item Gestión de tramites:Permite a los administradores crear, modificar y eliminar trámites disponibles para los usuarios.
+	\item Comunicación y Notificaciones: Este módulo será responsable de facilitar la comunicación entre el bufete de abogados y sus clientes, a través de mensajes de correos electrónicos que informaran el estado de las citas y servicios solicitados.
+	\item Administración del Sistema: Este módulo será utilizado por los administradores del sistema para gestionar usuarios, configurar ajustes de la aplicación, generar informes y realizar tareas de mantenimiento.
+	\item Análisis y Reportes: Este módulo se encargará de recopilar datos sobre el uso de la aplicación, el rendimiento del sistema y la satisfacción del cliente, para generar informes y análisis que ayuden a mejorar la eficiencia y calidad del servicio.
 \end{itemize}
 
 Para el desarrollo de los módulos propuestos se siguen los pasos que establece la metodología ágil XP,
@@ -45,7 +52,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Bajo}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Como usuario nuevo, quiero poder registrarme en la aplicación proporcionando mi información personal, como nombre, dirección de correo electrónico y contraseña, para acceder a las funcionalidades de la aplicación.
@@ -67,27 +74,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	}
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
-\begin{userstory}[tb:prueba]
-	\storyname{Registrar Usuario}
-	\storyuser{Administrador}
-	\storyiter{1}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de registrar usuario, donde se muestra una página con un formulario a rellenar con los siguientes datos.
-		\begin{itemize}
-			\item Nombre
-			\item Apellidos
-			\item Contraseña
-			\item Usuario
-		\end{itemize}
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
+
 
 \begin{userstory}[tb:prueba]
 	\storyname{Iniciar Sesión}
@@ -95,7 +82,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Bajo}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Como usuario registrado, quiero poder iniciar sesión en la aplicación utilizando mi dirección de correo electrónico y contraseña, para acceder a mis datos y realizar acciones dentro de la aplicación.
@@ -152,10 +139,10 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1.5}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
-		Permite al usuario poder acceder a la opción de registrar su cita, donde se muestra una página con un formulario a rellenar con los siguientes campos
+		Permite al usuario acceder a la opción de registrar su cita, donde se muestra una página con un formulario a rellenar con los siguientes campos
 		\begin{itemize}
 			\item Nombre
 			\item Apellidos
@@ -173,25 +160,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-\begin{userstory}[tb:prueba]
-	\storyname{Autenticar Usuario}
-	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
-	\storyiter{1}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de autenticarse en el sistema, donde se muestra una la página principal mediante estos campos.
-		\begin{itemize}
-			\item Usuario 
-			\item Contraseña
-		\end{itemize}
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
+
 
 \begin{userstory}[tb:prueba]
 	\storyname{Modificar Usuario}
@@ -199,7 +168,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de modificar usuario, donde se muestra una página con un formulario con los datos que el usuario puede modificar los cuales son.
@@ -222,7 +191,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de eliminar usuario, donde se muestra una página con un mensaje de advertencia.
@@ -241,7 +210,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1.5}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{0.3}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario recibir una notificación a su teléfono móvil, sobre que la cita ha sido realizada de forma exitosa. Mostrando el siguiente texto.
@@ -252,106 +221,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-% Crear Contrato
-\begin{userstory}[tb:prueba]
-	\storyname{Crear Contrato}
-	\storyuser{Registradora}
-	\storyiter{1.5}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Descripción:
-		Permite al usuario poder acceder a la opción de crear contrato, donde se muestra una página con el contrato previamente elaborado, mostrando los siguientes datos.
-		
-		\begin{itemize}
-			\item Datos generales del cliente (nombre y apellidos, ci)
-			\item Residente (dirección particular)
-			\item Teléfono de localización 
-			\item Beneficiario (nombre y apellidos)
-			\item Tipo y Cantidad de Documentos 
-			\item Codigo 
-			\item Sellos
-			\item Nombre y apellidos de la legalizadora que realiza el contrato 
-			\item Valor total del contrato
-			\item Valor de los sellos
-		\end{itemize}
-		
-	}
-	\storyobservation{
-	}	
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
 
-% Modificar Contrato
-\begin{userstory}[tb:prueba]
-	\storyname{Modificar Contrato}
-	\storyuser{Registradora}
-	\storyiter{1.5}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de modificar contrato, donde se muestra una página con el contrato previamente elaborado, mostrando los siguientes datos.
-		
-		\begin{itemize}
-			\item Datos generales del cliente (nombre y apellidos, ci)
-			\item Residente (dirección particular)
-			\item Teléfono de localización 
-			\item Beneficiario (nombre y apellidos)
-			\item Tipo y Cantidad de Documentos 
-			\item Codigo 
-			\item Sellos
-			\item Nombre y apellidos de la legalizadora que realiza el contrato 
-			\item Valor total del contrato
-			\item Valor de los sellos
-		\end{itemize}
-		
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Eliminar Contrato
-\begin{userstory}[tb:prueba]
-	\storyname{Eliminar Contrato}
-	\storyuser{Legalizador}
-	\storyiter{1.5}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de eliminar contrato, donde se muestra una página con un mensaje de advertencia.
-		Estas seguro
-		¡No podrás revertir esto!
-		
-	}
-	\storyobservation{
-	}	
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Imprimir Contrato
-\begin{userstory}[tb:prueba]
-	\storyname{Imprimir Contrato}
-	\storyuser{Legalizador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de imprimir contrato 2 copias.
-		
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
 
 % Crear Tramite
 \begin{userstory}[tb:prueba]
@@ -360,7 +230,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{4}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de crear un trámite a realizar, donde se muestra una página con un formulario a rellenar con los siguientes datos:
@@ -385,7 +255,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{4}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de modificar un trámite a realizar, donde se muestra una página con un formulario con los siguientes datos:
@@ -410,104 +280,13 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{4}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{0.3}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de eliminar , donde se muestra una página con un mensaje de advertencia.
 		Estas seguro
 		¡No podrás revertir esto!		
 		
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Crear Prefactura
-\begin{userstory}[tb:prueba]
-	\storyname{Crear Prefactura}
-	\storyuser{Legalizador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de crear una prefactura realizar, donde se muestra una página con un formulario a rellenar con los siguientes datos:
-		
-		\begin{itemize}
-			\item Codigo
-			\item Nombre
-			\item Orden de Trabajo
-			\item No
-			\item Fecha
-			\item Direccion
-		\end{itemize}
-		
-		
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Modificar Prefactura
-\begin{userstory}[tb:prueba]
-	\storyname{Modificar Prefactura}
-	\storyuser{Legalizador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de modificar un trámite a realizar, donde se muestra una página con un formulario con los siguientes datos:
-		
-		\begin{itemize}
-			\item Codigo
-			\item Nombre
-			\item Orden de Trabajo
-			\item No
-			\item Fecha
-			\item Direccion
-		\end{itemize}
-		
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Eliminar Prefactura
-\begin{userstory}[tb:prueba]
-	\storyname{Eliminar Prefactura}
-	\storyuser{Legalizador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de eliminar Prefactura, donde se muestra una página con un mensaje de advertencia.
-		Estas seguro
-		¡No podrás revertir esto!
-	}	
-	\storyobservation{
-	}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-% Imprimir Prefactura
-\begin{userstory}[tb:prueba]
-	\storyname{Imprimir Prefactura}
-	\storyuser{Legalizador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{2}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario poder acceder a la opción de imprimir la prefactura.
 	}	
 	\storyobservation{
 	}
@@ -521,7 +300,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{4}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de solicitar una cita, donde se muestra una página con un formulario a rellenar con los siguientes campos:
@@ -548,7 +327,7 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyiter{1.5}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{2}
+	\storypoints{0.2}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de Aceptar Cita, donde se muestra una página con un mensaje de advertencia.
@@ -575,27 +354,22 @@ la prioridad con que se implementarán las HU organizadas por iteraciones. Tenien
 asociado a las HU y a las prioridades del cliente, se define una versión que sea de valor para este.
 
 \begin{effortestimation}
-	\addentry[1]{Iniciar Sesión}{1}
-	\addentry[1]{Gestión de Perfiles de Usuario}{1}
-	\addentry[1]{Registrar Cita}{1}
-	\addentry[1]{Autenticar Usuario}{1}
-	\addentry[1]{Modificar Usuario}{1}
-	\addentry[1]{Registrar Usuario}{1}
-	\addentry[1]{Eliminar Usuario}{1}
-	\addentry[2]{Notificar vía SMS}{1}
-	\addentry[2]{Crear Contrato}{1}
-	\addentry[2]{Modificar Contrato}{1}
-	\addentry[2]{Eliminar Contrato}{1}
-	\addentry[2]{Imprimir Contrato}{1}
-	\addentry[3]{Crear Tramite}{1}
-	\addentry[3]{Modificar Tramite}{1}
-	\addentry[3]{Eliminar Tramite}{1}
-	\addentry[3]{Crear Prefactura}{1}
-	\addentry[3]{Modificar Prefactura}{1}
-	\addentry[3]{Eliminar Prefactura}{1}
-	\addentry[3]{Imprimir Prefactura}{1}
-	\addentry[4]{Solicitar Cita al notario}{1}
-	\addentry[4]{Aceptar Cita}{1}
+	\addentry[1]{ Registro de Usuario}{0.5}
+	\addentry[1]{ Iniciar Sesión}{ 0.3 }
+	\addentry[1]{ Gestión de Perfiles de Usuario}{0.5}
+	\addentry[1]{ Registrar Cita}{0.3}
+	\addentry[1]{Modificar Usuario}{0.3}
+	\addentry[1]{Eliminar Usuario}{0.2}
+	\addentry[2]{Notificar vía SMS}{0.3}
+	\addentry[3]{Crear Tramite}{0.5}
+	\addentry[3]{Modificar Tramite}{0.3}
+	\addentry[3]{Eliminar Tramite}{0.2}
+	\addentry[3]{Crear Prefactura}{0.5}
+	\addentry[3]{Modificar Prefactura}{0.3}
+	\addentry[3]{Eliminar Prefactura}{0.2}
+	\addentry[3]{Imprimir Prefactura}{0.2}
+	\addentry[4]{Solicitar Cita al notario}{0.4}
+	\addentry[4]{Aceptar Cita}{0.2}
 \end{effortestimation}
 
 
@@ -610,6 +384,30 @@ se muestra en la tabla siguiente:
 \subsection{Plan de entregas}
 
 En el plan de entrega que se plantea a continuación, se hace una propuesta de las versiones (releases) del sistema. Cada versión se conformará al finalizar una iteración.
+
+\begin{longtable}[c]{|l|p{3.0cm}|p{3.0cm}|p{3.0cm}|p{3.0cm}|}
+	\captionsetup{margin=1.15\leftmargin}
+	\caption{Plan de entrega de versiones}
+	\label{grid_example_2_rows_5_columns} \\[2ex]
+	
+	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Entregable }}} & \multicolumn{1}{c|}{\colorentry{\textbf{ Iteración 1}}} & \multicolumn{1}{c|}{\colorentry{\textbf{ Iteración 2}}} & \multicolumn{1}{c|}{\colorentry{\textbf{ Iteración 3}}} & \multicolumn{1}{c|}{\colorentry{\textbf{ Iteración 4}}} \\ \hline 
+	\endfirsthead
+	
+	\caption{Continuación de la página anterior} \\ 
+	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Columna 1}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 2}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 3}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 4}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 5}}} \\ \hline 
+	\endhead
+	
+	\hline \multicolumn{5}{|r|}{{Continúa en la siguiente página}} \\ \hline
+	\endfoot
+	
+	\hline
+	\endlastfoot
+	
+	Módulos & Versión 0.1 & Versión 0.2 & Versión 0.3 &Versión 0.4  \\ \hline
+	Fecha & 5/9/2024 & 26/9/2024 & 24/10/2024 & 18/11/2024 \\ \hline
+	
+\end{longtable}
+
 
 \section{Fase II: Diseño del sistema}
 
@@ -734,6 +532,19 @@ solución.
 \end{crccard}
 
 \section{Conclusiones del capítulo}
+	
+	En el presente capítulo se ha descrito en detalle el diseño y las características principales del sistema propuesto para Transconsul \ac{S.A.}, con el objetivo de mejorar la gestión de sus servicios legales. A través de la implementación de un enfoque modular, una metodología ágil y herramientas de diseño avanzadas, se ha logrado establecer una solución técnica robusta y alineada con los requerimientos de la empresa. A continuación, se destacan las conclusiones principales:
+	
+	\begin{enumerate}
+		\item \textbf{Diseño modular y flexible:} El sistema propuesto se basa en un diseño modular que permite una implementación escalonada de las funcionalidades, facilitando tanto el desarrollo como el mantenimiento. Esta estructura asegura que el sistema pueda adaptarse a las necesidades cambiantes de la empresa y escalar conforme se incrementen los servicios ofrecidos o se modifiquen los procesos.
+		
+		\item \textbf{Historias de Usuario (HU) como guía central:} La definición clara y detallada de las Historias de Usuario (HU) ha sido fundamental para captar de manera precisa los requerimientos de los diferentes actores del sistema, lo que ha permitido priorizar las funcionalidades críticas y garantizar que el desarrollo esté centrado en las necesidades del cliente final.
+		
+		\item \textbf{Planificación iterativa con XP:} La metodología ágil \textbf{Extreme Programming (XP)} ha proporcionado un marco de trabajo eficiente, que no solo permite un desarrollo continuo, sino también una retroalimentación constante con el cliente, asegurando que los cambios puedan incorporarse rápidamente sin afectar la calidad del producto final. El plan de iteraciones y el plan de entregas garantizan un desarrollo ordenado y progresivo.
+		
+		\item \textbf{Uso de patrones de diseño (GRASP y GoF):} La aplicación de patrones de diseño, como \textbf{GRASP} y \textbf{GoF}, ha contribuido significativamente a una mejor organización del código y a una asignación más eficiente de las responsabilidades entre las clases del sistema. Estos patrones garantizan un diseño coherente, reutilizable y fácil de mantener, reduciendo la complejidad a medida que el sistema crece.
+	\end{enumerate}
+	
+	En conclusión, este capítulo ha establecido las bases técnicas y funcionales necesarias para la implementación del sistema, asegurando que la solución propuesta no solo cumpla con los objetivos establecidos, sino que también sea lo suficientemente flexible y escalable para evolucionar junto con las necesidades de Transconsul \ac{S.A.}.
+	
 
-En este capítulo se han abordado los aspectos referentes a la concepción del producto a desarrollar y sus
-características funcionales. Esto permitió arribar a las siguientes conclusiones:

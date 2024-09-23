@@ -3,16 +3,15 @@
 
 \section{Introducción al capítulo}
 
-En el presente capítulo se detallan las iteraciones realizadas durante la etapa de construcción de los
-módulos propuestos, además se exponen las tareas de ingeniería generadas para cada HU que que fueron
-definidas, así como las pruebas de aceptación planificadas para el sistema. De esta forma es obtenido un
-producto funcional probado y listo para entregar al cliente al final de cada iteración como propone XP.
+Este capítulo se centra en la implementación y validación del sistema de gestión de citas desarrollado para Transconsul S.A., siguiendo las pautas establecidas en los capítulos previos. La implementación se realizó utilizando la metodología ágil Extreme Programming (XP), lo que permitió un enfoque iterativo y adaptable, favoreciendo la retroalimentación continua por parte del cliente y asegurando que el sistema evolucionara conforme a sus necesidades. \\
+
+El proceso de desarrollo estuvo guiado por las Historias de Usuario (HU), que sirvieron para desglosar las funcionalidades principales en tareas de ingeniería específicas. Estas tareas se abordaron en distintas iteraciones, lo que facilitó la construcción modular del sistema y permitió la entrega de incrementos funcionales en cada fase del proyecto. A lo largo del desarrollo, se prestó especial atención a garantizar que cada componente cumpliera con los requisitos funcionales, técnicos y de experiencia de usuario planteados inicialmente. \\
+
+Una vez completada la implementación, el sistema fue sometido a un riguroso proceso de pruebas, que incluyó pruebas unitarias, pruebas de integración y pruebas de aceptación. Estas pruebas fueron fundamentales para asegurar el correcto funcionamiento del sistema en su conjunto y garantizar que cada módulo se integrara sin problemas, cumpliendo con los estándares de calidad y rendimiento esperados. \\
 
 \section{Fase III: Desarrollo}
 
-En esta fase, XP plantea que las HU seleccionadas para ser implementadas se realizan durante el transcurso de la iteración a la que pertenecen. Por estas razones, se lleva a cabo una revisión del plan de iteraciones
-y se modifican en caso de ser necesario. Como parte de este plan se descomponen las HU en tareas de
-ingeniería \citep{joskowicz2008reglas}.
+El desarrollo del sistema de gestión de citas para Transconsul S.A. se llevó a cabo siguiendo una metodología ágil, basada en Extreme Programming (XP), que permitió organizar el trabajo en iteraciones cortas y entregas parciales de funcionalidades. Esta metodología fue seleccionada por su capacidad para adaptarse a cambios en los requisitos y su enfoque en la retroalimentación continua del cliente. El proceso de desarrollo se estructuró en varias fases, cada una de ellas enfocada en la implementación de módulos específicos.
 
 \section{Tareas de ingeniería}
 
@@ -25,9 +24,253 @@ se manifiesta a continuación
 
 \subsection{Tareas de ingeniería para la Iteración I}
 
+ \begin{engineeringtask}
+	\engtaskuserstory {1}
+    \engtaskname { Implementar el formulario de registro de usuario }
+    \engtasktype { Desarrollo }
+	\engtaskpointestimation {2}
+	\engtaskstartdate {1}{9}{2024} % day , month , year
+	\engtaskenddate {2}{9}{2024}
+	\engtaskdescription {Se implementa una funcionalidad que permite a un nuevo usuario registrarse en la aplicación proporcionando su nombre, correo electrónico, contraseña y carnet de identidad. El sistema validará la información ingresada y almacenará los datos del usuario en la base de datos. Una vez completado el registro, el sistema enviará un correo electrónico de confirmación para verificar la dirección de correo del usuario y permitir que este pueda iniciar sesión en la aplicación.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+  \end{engineeringtask}
+	
+	 \begin{engineeringtask}
+		\engtaskuserstory {1}
+		\engtaskname { Implementar validación de los campos de registro }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {1.2}
+		\engtaskstartdate {2}{9}{2024} % day , month , year
+		\engtaskenddate {3}{9}{2024}
+		\engtaskdescription {Se implementan las validaciones tanto en el frontend como en el backend para los campos de registro. El correo electrónico debe tener el formato adecuado, la contraseña debe cumplir con los requisitos de seguridad, y el número de carnet de identidad debe ser válido según el formato establecido por las autoridades. El sistema notificará al usuario si alguna información es incorrecta, solicitando que la corrija antes de completar el registro.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+	 \begin{engineeringtask}
+		\engtaskuserstory {1}
+		\engtaskname { Almacenamiento de la cuenta de usuario en la base de datos }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {1.5}
+		\engtaskstartdate {3}{9}{2024} % day , month , year
+		\engtaskenddate {4}{9}{2024}
+		\engtaskdescription {Se desarrolla la funcionalidad para almacenar los datos del nuevo usuario en la base de datos, utilizando el modelo de datos que incluye nombre, correo electrónico, contraseña encriptada y carnet de identidad. Los datos se almacenan de forma segura, y el sistema garantiza que no haya duplicados en las direcciones de correo o los números de identificación.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+	\begin{engineeringtask}
+		\engtaskuserstory {2}
+		\engtaskname { Implementar el formulario de inicio de sesión }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {0.8}
+		\engtaskstartdate {5}{9}{2024} % day , month , year
+		\engtaskenddate {6}{9}{2024}
+		\engtaskdescription {Se implementa un formulario de inicio de sesión que permitirá a los usuarios ingresar su dirección de correo electrónico y contraseña. El formulario debe validar que ambos campos estén presentes y que el formato del correo electrónico sea correcto.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+	\begin{engineeringtask}
+		\engtaskuserstory {2}
+		\engtaskname { Validación de las credenciales de inicio de sesión }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {1.2}
+		\engtaskstartdate {6}{9}{2024} % day , month , year
+		\engtaskenddate {7}{9}{2024}
+		\engtaskdescription {Se implementa  la lógica de validación de credenciales, que verificará si el correo electrónico y la contraseña ingresados coinciden con los datos almacenados en la base de datos. Si las credenciales son válidas, el sistema debe autenticar al usuario y redirigirlo a la página principal. Si las credenciales son incorrectas, se mostrará un mensaje de error.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+		\begin{engineeringtask}
+		\engtaskuserstory {2}
+		\engtaskname { Autenticación de sesión de usuario }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {1}
+		\engtaskstartdate {7}{9}{2024} % day , month , year
+		\engtaskenddate {8}{9}{2024}
+		\engtaskdescription {Se implementa  el mecanismo de autenticación para generar una sesión de usuario una vez que el inicio de sesión sea exitoso. La sesión debe mantenerse activa mientras el usuario navega por la aplicación, y solo debe finalizar cuando el usuario cierre sesión manualmente o la sesión expire por inactividad.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+	\begin{engineeringtask}
+		\engtaskuserstory {2}
+		\engtaskname { Mensajes de error para credenciales incorrectas }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {0.5}
+		\engtaskstartdate {8}{9}{2024} % day , month , year
+		\engtaskenddate {9}{9}{2024}
+		\engtaskdescription {Se desarrolla la funcionalidad para mostrar un mensaje de error cuando las credenciales de inicio de sesión sean incorrectas. El mensaje debe ser claro y específico, indicando al usuario que su correo o contraseña no son válidos, y sugiriendo la recuperación de su contraseña.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+		\begin{engineeringtask}
+		\engtaskuserstory {2}
+		\engtaskname { Mensajes de error para credenciales incorrectas }
+		\engtasktype { Desarrollo }
+		\engtaskpointestimation {0.5}
+		\engtaskstartdate {8}{9}{2024} % day , month , year
+		\engtaskenddate {9}{9}{2024}
+		\engtaskdescription {Se desarrolla la funcionalidad para mostrar un mensaje de error cuando las credenciales de inicio de sesión sean incorrectas. El mensaje debe ser claro y específico, indicando al usuario que su correo o contraseña no son válidos, y sugiriendo la recuperación de su contraseña.}
+		\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+	\end{engineeringtask}
+	
+	
 \subsection{Tareas de ingeniería para la Iteración II}
 
+		\begin{engineeringtask}
+	\engtaskuserstory {7}
+	\engtaskname { Implementar la integración con el servicio SMS }
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {1.2}
+	\engtaskstartdate {9}{9}{2024} % day , month , year
+	\engtaskenddate {10}{9}{2024}
+	\engtaskdescription {Se configura un servicio externo de SMS para enviar notificaciones a los usuarios cuando su cita sea confirmada. El sistema debe generar el mensaje de acuerdo con el formato establecido e incluir la fecha y la dirección de la cita.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+	\begin{engineeringtask}
+	\engtaskuserstory {7}
+	\engtaskname { Implementar la generación del mensaje de notificación }
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.8}
+	\engtaskstartdate {10}{9}{2024} % day , month , year
+	\engtaskenddate {11}{9}{2024}
+	\engtaskdescription {El sistema  genera un mensaje dinámico que incluya la fecha y la dirección de la cita del cliente. El mensaje debe seguir el siguiente formato: 
+		"Su cita ha sido programada para (fecha de la cita) en (dirección de la entidad)."}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
 \subsection{Tareas de ingeniería para la Iteración III}
+
+\begin{engineeringtask}
+	\engtaskuserstory {8}
+	\engtaskname { Diseño e implementación del formulario de creación de trámite }
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.8}
+	\engtaskstartdate {11}{9}{2024} % day , month , year
+	\engtaskenddate {12}{9}{2024}
+	\engtaskdescription {Se desarrolla un formulario en la interfaz para que el Administrador pueda crear un nuevo trámite. El formulario debe incluir los campos para el Código, Descripción y Precio.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {8}
+	\engtaskname {Validación de datos del formulario}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.6}
+	\engtaskstartdate {12}{9}{2024} % day , month , year
+	\engtaskenddate {13}{9}{2024}
+	\engtaskdescription {Se implementan validaciones para asegurar que los datos ingresados en el formulario sean correctos. El campo Código debe ser único, el campo Precio debe ser numérico y la Descripción no debe estar vacía. Las validaciones se realizarán tanto en el frontend como en el backend.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {8}
+	\engtaskname {Almacenamiento de trámite en la base de datos}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.7}
+	\engtaskstartdate {13}{9}{2024} % day , month , year
+	\engtaskenddate {14}{9}{2024}
+	\engtaskdescription { se implementa la lógica para que, al enviar el formulario, el trámite creado se almacene correctamente en la base de datos. El sistema debe garantizar que no se repitan códigos de trámite y que toda la información esté disponible para futuras consultas y modificaciones.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {10}
+	\engtaskname { Implementar la funcionalidad de eliminación de trámite}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.5}
+	\engtaskstartdate {14}{9}{2024} % day , month , year
+	\engtaskenddate {15}{9}{2024}
+	\engtaskdescription {Se implementa la funcionalidad para que los usuarios con permisos administrativos puedan eliminar un trámite existente. El sistema debe presentar un mensaje de advertencia al usuario, advirtiendo que la acción es irreversible, y solo procederá con la eliminación si el usuario confirma.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {10}
+	\engtaskname { Desarrollar la interfaz de advertencia de eliminación}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.4}
+	\engtaskstartdate {15}{9}{2024} % day , month , year
+	\engtaskenddate {16}{9}{2024}
+	\engtaskdescription {Se diseña un  modal emergente en el que se muestre un mensaje de advertencia al usuario antes de proceder con la eliminación del trámite. El mensaje debe ser claro y advertir que la eliminación no puede revertirse, ofreciendo las opciones de Confirmar o Cancelar.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\subsection{Tareas de ingeniería para la Iteración IV}
+
+\begin{engineeringtask}
+	\engtaskuserstory {15}
+	\engtaskname { Implementar el formulario de solicitud de cita}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.8}
+	\engtaskstartdate {16}{9}{2024} % day , month , year
+	\engtaskenddate {17}{9}{2024}
+	\engtaskdescription {Se implementa un formulario en la interfaz de usuario para permitir que el cliente solicite una cita con el notario. El formulario incluye los siguientes campos: 
+	\begin{itemize}
+		\item Nombre
+	    \item Apellidos
+		\item Dirección Particular
+		\item Carnet de Identidad (CI)
+		\item Teléfono de localización
+		\item Motivo por el cual solicita la cita
+		\end{itemize}}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {15}
+	\engtaskname { Validación de datos del formulario}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.6}
+	\engtaskstartdate {17}{9}{2024} % day , month , year
+	\engtaskenddate {18}{9}{2024}
+	\engtaskdescription {Se implementan validaciones en el frontend y el backend para asegurar que los datos ingresados en el formulario sean correctos. El campo Carnet de Identidad debe tener el formato adecuado, el número de teléfono debe contener dígitos válidos, y el motivo de la cita debe ser obligatorio.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {15}
+	\engtaskname { Almacenamiento de la solicitud de cita}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.7}
+	\engtaskstartdate {18}{9}{2024} % day , month , year
+	\engtaskenddate {19}{9}{2024}
+	\engtaskdescription {Se desarrolla la lógica necesaria para almacenar los datos de la cita solicitada en la base de datos. Se debe garantizar que los datos estén correctamente estructurados y que el cliente pueda ver su solicitud en su panel de usuario, con la posibilidad de seguimiento.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {16}
+	\engtaskname {Implementar la opción de aceptar cita}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.6}
+	\engtaskstartdate {19}{9}{2024} % day , month , year
+	\engtaskenddate {20}{9}{2024}
+	\engtaskdescription {Se implementa una opción en la interfaz para que el notario pueda aceptar una cita pendiente. Al seleccionar esta opción, se muestra un mensaje de advertencia para confirmar la acción antes de proceder. El sistema debe notificar al cliente una vez que la cita sea aceptada por el notario.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {16}
+	\engtaskname {Desarrollar la interfaz de advertencia}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.4}
+	\engtaskstartdate {20}{9}{2024} % day , month , year
+	\engtaskenddate {21}{9}{2024}
+	\engtaskdescription {Se desarrolla un modal emergente en el que se muestre el mensaje de advertencia al notario antes de confirmar la aceptación de la cita. El mensaje debe advertir claramente que la acción será irreversible y que el cliente será notificado.}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
+\begin{engineeringtask}
+	\engtaskuserstory {16}
+	\engtaskname { Enviar notificación al cliente tras aceptación de cita}
+	\engtasktype { Desarrollo }
+	\engtaskpointestimation {0.5}
+	\engtaskstartdate {21}{9}{2024} % day , month , year
+	\engtaskenddate {22}{9}{2024}
+	\engtaskdescription {Se implementa la lógica para enviar una notificación al cliente cuando el notario acepte la cita. Esta notificación se  envía automáticamente, confirmando al cliente la cita aceptada y proporcionando los detalles correspondientes (fecha, hora y lugar).}
+	\engtaskprogrammer { Técn. Carlos Brayan Rámila Chorens }
+\end{engineeringtask}
+
 
 Con las tareas de ingeniería definidas, se hace necesario establecer un conjunto de pruebas para comprobar la calidad de la solución implementada. Luego, se analizan estos casos de prueba y se ejecutan, lo que permite medir el nivel de cumplimiento con los objetivos de implementación trazados y el nivel de
 satisfacción del cliente. Así lo propone XP.

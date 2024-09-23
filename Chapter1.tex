@@ -3,11 +3,13 @@
 \label{chap:chapter1}
 \section{Introducción al capítulo}
 
-En este capítulo se sintetiza la búsqueda y análisis de la información relacionada con el dominio del
-problema. Son descritos los conceptos fundamentales relacionados con la investigación y analizadas algunas
-soluciones existentes referentes al mismo entorno. Aborda además, la selección y descripción de las princi-
-pales tecnologías y herramientas que serán utilizadas para llevar a cabo la implementación de la solución a
-desarrollar.
+El éxito de una solución tecnológica radica en la comprensión del problema y la correcta selección de enfoques metodológicos y herramientas. Este capítulo establece las bases teóricas que sustentan el desarrollo de la aplicación web propuesta para Transconsul \ac{S.A.}, con el fin de mejorar la gestión de sus servicios legales.\\
+
+Se comienza con una revisión de los sistemas de gestión de citas y servicios, destacando su relevancia en la optimización de procesos y mejora de la atención al cliente. Además, se analizan sistemas homólogos implementados en otros entornos, extrayendo lecciones que enriquecen la propuesta.\\
+
+A continuación, se presenta la metodología Extreme Programming (XP), elegida por su flexibilidad y enfoque en la entrega continua de valor, permitiendo una adaptación ágil a las necesidades cambiantes de Transconsul \ac{S.A.}.\\
+
+Finalmente, se describen las herramientas tecnológicas seleccionadas, como Django y MySQL, justificando su elección por su escalabilidad, seguridad y capacidad de desarrollo ágil, lo que asegura una solución eficiente. Este marco teórico provee la estructura necesaria para el diseño y desarrollo del sistema, garantizando que las decisiones técnicas se alineen con los objetivos del proyecto.\\
 
 \section{Sistema de gestión de citas y servicios}
 
@@ -16,12 +18,12 @@ desarrollar.
 	\caption{Roles del sistema}
 	\label{grid_mlmmh} \\[2ex]
 	
-	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Roles}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Interacción en Medicando}}} \\ \hline 
+	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Roles}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Descripción}}} \\ \hline 
 	\endfirsthead
 	
 	\caption{Continuación de la página anterior} \\
 	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Roles}}} &
-	\multicolumn{1}{c|}{\colorentry{\textbf{Interacción en Medicando}}} \\ \hline 
+	\multicolumn{1}{c|}{\colorentry{\textbf{Descripción}}} \\ \hline 
 	\endhead
 	
 	\hline \multicolumn{2}{|r|}{{Continúa en la siguiente página}} \\ \hline
@@ -39,12 +41,37 @@ desarrollar.
 
 \section{Sistemas Homólogos}
 
-CONABI Consultores y Abogados Internacionales: Este bufete de abogados ha estado prestando servicios legales con un alto nivel de especialización en varias ramas del derecho a personas naturales y jurídicas extranjeras o cubanas radicadas en el exterior durante más de 15 años. Su sistema permite la gestión y reserva de citas legales y otros trámites legales. \\
+CONABI Consultores y Abogados Internacionales: Es un bufete cubano con más de 15 años de experiencia que ofrece servicios legales especializados en diversas áreas del Derecho, principalmente a clientes extranjeros o cubanos que residen fuera del país. Entre sus servicios más destacados está la asistencia en la obtención y legalización de certificaciones de antecedentes penales, un proceso que ahora también se puede realizar en línea. Los usuarios pueden registrarse en su portal web y pagar a través de plataformas cubanas como Transfermóvil y EnZona. Este servicio facilita la gestión remota de trámites, lo cual es útil tanto para residentes como para cubanos en el extranjero.\citep{conabi} \\
 
-CLAIM: Es una consultoría especializada en Propiedad Intelectual. Su sistema permite la representación y asesoramiento a terceros, nacionales y extranjeros, en temas relacionados con la adquisición, mantenimiento, asesoramiento, protección y defensa de sus derechos en materia de Propiedad Industrial, derechos de autor y registros sanitarios. \\
+CLAIM: CLAIM \ac{S.A.} (Consultores Legales y Agentes de Invenciones y Marcas) es una consultoría especializada en propiedad intelectual con sede en La Habana, Cuba. Su enfoque principal es asesorar y representar tanto a personas naturales como jurídicas, cubanas y extranjeras, en temas relacionados con la adquisición, mantenimiento, protección y defensa de derechos de propiedad industrial, derechos de autor, y registros sanitarios.CLAIM \ac{S.A.} ofrece un sistema de gestión web centrado en la protección de la propiedad intelectual. Aunque no se ha especificado en detalle un sistema de gestión específico de tipo SaaS, CLAIM \ac{S.A.} utiliza tecnología avanzada para agilizar los procesos de registro, búsqueda, renovación y protección de derechos de propiedad industrial. A través de su plataforma, los clientes pueden gestionar registros de marcas, patentes y derechos de autor de manera eficiente, asegurando la confidencialidad y seguridad de la información que manejan.\citep{noauthor_claim_nodate} \\
 
-Clio: Clio es un software de gestión de prácticas legales basado en la nube que permite a los bufetes de abogados gestionar casos, realizar un seguimiento del tiempo, facturar a los clientes y programar citas. Clio también ofrece una función de portal del cliente que permite a los clientes reservar sus propias citas, lo que puede aumentar la eficiencia y la satisfacción del cliente.
+Clio: Clio es una plataforma de gestión legal bastante conocida. Facilita la administración de las operaciones diarias de los bufetes de abogados mediante herramientas que permiten gestionar casos, realizar un seguimiento del tiempo, facturar y programar citas. El portal del cliente es una característica clave, ya que permite a los clientes interactuar directamente con el bufete, agendar citas y acceder a información relevante sobre sus casos. Esto puede mejorar la eficiencia operativa y la satisfacción del cliente.\citep{noauthor_clio_nodate} \\
 
+\begin{longtable}[c]{|l|p{4.0cm}|p{3.5cm}|p{3.5cm}|}
+	\captionsetup{margin=1.15\leftmargin}
+	\caption{Comparación de aplicaciones homólogas}
+	\label{grid_example_4_columns} \\[2ex]
+	
+	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Aplicaciones}}} & \multicolumn{1}{c|}{\colorentry{\textbf{CONABI}}} & \multicolumn{1}{c|}{\colorentry{\textbf{CLAIM}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Clio}}} \\ \hline 
+	\endfirsthead
+	
+	\caption{Continuación de la página anterior} \\ 
+	\hline \multicolumn{1}{|c|}{\colorentry{\textbf{Columna 1}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 2}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 3}}} & \multicolumn{1}{c|}{\colorentry{\textbf{Columna 4}}} \\ \hline 
+	\endhead
+	
+	\hline \multicolumn{4}{|r|}{{Continúa en la siguiente página}} \\ \hline
+	\endfoot
+	
+	\hline
+	\endlastfoot
+	
+	Código Libre & No & No & No \\ \hline
+	Elemento 2 & Descripción detallada del segundo elemento en la columna 2. & Descripción adicional en la columna 3. & Información adicional en la columna 4. \\ \hline
+	Elemento 3 & Descripción detallada del tercer elemento en la columna 2. & Descripción adicional en la columna 3. & Información adicional en la columna 4. \\ \hline
+	Elemento 4 & Descripción detallada del cuarto elemento en la columna 2. & Descripción adicional en la columna 3. & Información adicional en la columna 4. \\ \hline
+	Elemento 5 & Descripción detallada del quinto elemento en la columna 2. & Descripción adicional en la columna 3. & Información adicional en la columna 4. \\ \hline
+	
+\end{longtable}
 
 \section{Metodología de desarrollo de software}
 
@@ -92,8 +119,7 @@ La elección y uso de herramientas y tecnologías apropiadas es crucial para el éx
 	
 	\item Entorno de desarrollo: Visual Studio Code es un editor de código fuente liviano pero potente que se ejecuta en su escritorio y está disponible para Windows, macOS y Linux. Viene con soporte integrado para JavaScript, TypeScript y Node.js y tiene un rico ecosistema de extensiones para otros lenguajes y tiempos de ejecución (como C++, Java, C\#, Python, PHP, Go, .NET)   \\
 	Un 'entorno' en Python es el contexto en el que se ejecuta un programa Python que consta de un intérprete y cualquier cantidad de paquetes instalados. \\
-	
-	\item El venv módulo admite la creación de "entornos virtuales" livianos, cada uno con su propio conjunto independiente de paquetes Python instalados en sus sitedirectorios. Un entorno virtual se crea sobre una instalación de Python existente, conocida como Python ?base? del entorno virtual, y opcionalmente puede aislarse de los paquetes en el entorno base, de modo que solo estén disponibles aquellos instalados explícitamente en el entorno virtual. Cuando se utilizan desde un entorno virtual, las herramientas de instalación comunes, como pip , instalarán paquetes de Python en un entorno virtual sin necesidad de que se le indique explícitamente que lo haga.
+	El venv módulo admite la creación de entornos virtuales livianos, cada uno con su propio conjunto independiente de paquetes Python instalados en sus sitedirectorios. Un entorno virtual se crea sobre una instalación de Python existente, conocida como Python ?base? del entorno virtual, y opcionalmente puede aislarse de los paquetes en el entorno base, de modo que solo estén disponibles aquellos instalados explícitamente en el entorno virtual. Cuando se utilizan desde un entorno virtual, las herramientas de instalación comunes, como pip , instalarán paquetes de Python en un entorno virtual sin necesidad de que se le indique explícitamente que lo haga.
 	\\
 	\item Sistema Gestor de Base de Datos: se utilizó MySQL, este es un sistema de gestión de bases de datos
 	relacional, licenciado bajo la GPL de la GNU. Su diseño multihilo le permite soportar una gran carga
@@ -106,4 +132,20 @@ La elección y uso de herramientas y tecnologías apropiadas es crucial para el éx
 	existencia de una nutrida y activa comunidad \citep{gilfillan_biblia_2003}.
 \end{itemize}
 
-
+	
+\section*{Conclusiones del capítulo}
+	
+	En este capítulo se ha explorado el marco conceptual necesario para el desarrollo de un sistema de gestión de servicios legales en Transconsul \ac{S.A.} . La comprensión de los conceptos clave y el uso adecuado de metodologías de desarrollo y herramientas tecnológicas son esenciales para optimizar la gestión de citas y servicios, mejorando la eficiencia y calidad de los procesos empresariales.
+	
+	\begin{enumerate}
+		\item \textbf{La gestión eficiente de los servicios legales} es crucial para mantener la satisfacción del cliente y garantizar una operación fluida en empresas como Transconsul \ac{S.A.}. La implementación de un sistema de gestión de citas permite reducir el tiempo de espera y facilita la interacción entre clientes y la organización.
+		
+		\item \textbf{Los sistemas de gestión de servicios}, cuando se diseñan e implementan correctamente, no solo mejoran los procesos internos, sino que también contribuyen a elevar la reputación de la empresa, brindando una experiencia más ágil y accesible para los usuarios finales.
+		
+		\item \textbf{Los sistemas homólogos} analizados en el capítulo proporcionaron valiosas lecciones sobre las características y funcionalidades clave que deben incluirse en un sistema de gestión de servicios para optimizar el rendimiento y la satisfacción del cliente.
+		
+		\item \textbf{La adopción de la metodología Extreme Programming (XP)}, centrada en la entrega continua y el feedback del cliente, permite un enfoque flexible y ágil en el desarrollo del sistema. Además, el uso de herramientas como las \textit{Historias de Usuario} y las tarjetas \textit{CRC} facilitan la identificación de las necesidades y responsabilidades de cada módulo del sistema.
+	\end{enumerate}
+	
+	En resumen, este capítulo sienta las bases teóricas necesarias para garantizar que el sistema propuesto para Transconsul \ac{S.A.} no solo sea técnicamente sólido, sino también alineado con las mejores prácticas de gestión de servicios y desarrollo ágil de software.
+	
