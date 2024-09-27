@@ -43,24 +43,24 @@ en conjunto con el cliente. Una entrega debería obtenerse en no más de tres mese
 
 \subsection{Historias de Usuarios}
 
-Las HU son la técnica que utiliza XP para especificar los requisitos de software, estas deben ser programadas en un tiempo entre una y tres semanas. Si la estimación es superior a las tres semanas, debe ser dividida en dos o más historias. Si es menos de una semana, se debe combinar con otra HU. Las estimaciones de esfuerzo, asociado a la implementación de las historias, la establecen los programadores, utilizando como medida el punto. Un punto, equivale a una semana ideal de programación (5 días laborables). Las historias, generalmente, valen de 1 a 3 puntos. \citep{escribano2002introduccion}. A continuación se describen las HU definidas parra llevar a cabo el desarrollo de los módulos.
+Las HU son la técnica que utiliza XP para especificar los requisitos de software, estas deben ser programadas en un tiempo entre una y tres semanas. Si la estimación es superior a las tres semanas, debe ser dividida en dos o más historias. Si es menos de una semana, se debe combinar con otra HU. Las estimaciones de esfuerzo, asociado a la implementación de las historias, la establecen los programadores, utilizando como medida el punto. Un punto, equivale a una semana ideal de programación (5 días laborables). Las historias, generalmente, valen de 1 a 3 puntos. \citep{escribano2002introduccion}. A continuación se describen las HU definidas para llevar a cabo el desarrollo de los módulos.
 
 
 \begin{userstory}[tb:prueba]
 	\storyname{Registro de Usuario}
-	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
+	\storyuser{Cliente}
 	\storyiter{1}
 	\storypriority{Alta}
-	\storyrisk{Bajo}
-	\storypoints{1}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storyrisk{Medio}
+	\storypoints{0.2}
+	\storyprogrammer{Alejandro Santana Viamontes}
 	\storydescription{
 		Como usuario nuevo, quiero poder registrarme en la aplicación proporcionando mi información personal, como nombre, dirección de correo electrónico y contraseña, para acceder a las funcionalidades de la aplicación.
 		\begin{itemize}
 			\item nombre
 			\item dirección de correo electrónico
 			\item contraseña
-			\item carnet de identidad
+			\item rectificar contraseña
 		\end{itemize}
 	}
 	\storyobservation{
@@ -75,15 +75,31 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
+\begin{userstory}[tb:prueba]
+	\storyname{Página de Inicio}
+	\storyuser{Administrador, Legalizador, Cliente, Notario}
+	\storyiter{1}
+	\storypriority{Alta}
+	\storyrisk{Alto}
+	\storypoints{1}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite a los usuarios acceder a la pagina de inicio del sistema desde donde se accede a las demás funcionalidades del sistema.
+	}
+	\storyobservation{
+	
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
 
 \begin{userstory}[tb:prueba]
 	\storyname{Iniciar Sesión}
-	\storyuser{Administrador, Legalizador, Cliente, Registradora, Notario}
+	\storyuser{Administrador, Legalizador, Cliente, Notario}
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Bajo}
-	\storypoints{1}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storypoints{0.2}
+	\storyprogrammer{Alejandro Santana Viamontes}
 	\storydescription{
 		Como usuario registrado, quiero poder iniciar sesión en la aplicación utilizando mi dirección de correo electrónico y contraseña, para acceder a mis datos y realizar acciones dentro de la aplicación.
 		\begin{itemize}
@@ -108,9 +124,9 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	\storyname{Gestión de Perfiles de Usuario}
 	\storyuser{Administrador}
 	\storyiter{1}
-	\storypriority{Alta}
+	\storypriority{Media}
 	\storyrisk{Bajo}
-	\storypoints{1}
+	\storypoints{0.2}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Como administrador, quiero poder gestionar los perfiles de usuario, incluyendo la capacidad de crear, editar y eliminar cuentas de usuario, para mantener el control sobre quién tiene acceso a la aplicación.
@@ -119,12 +135,13 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 			\item dirección de correo electrónico
 			\item contraseña
 			\item carnet de identidad
+			\item rol
 		\end{itemize}
 	}	
 	\storyobservation{
 		\begin{itemize}
 			\item La aplicación debe proporcionar una interfaz de administración donde el administrador pueda ver una lista de todos los usuarios registrados.
-			\item El administrador debe poder crear nuevos perfiles de usuario, proporcionando información como nombre, dirección de correo electrónico y contraseña.
+			\item El administrador debe poder crear nuevos perfiles de usuario, proporcionando información como nombre, dirección de correo electrónico y contraseña, así como el rol. 
 			\item Se debe implementar la funcionalidad de edición para permitir al administrador actualizar la información de los perfiles de usuario existentes.
 			\item El administrador debe poder eliminar cuentas de usuario cuando sea necesario, lo que resultará en la eliminación permanente de los datos asociados con esa cuenta.
 			\item Se deben implementar controles de acceso adecuados para garantizar que solo el administrador tenga acceso a estas funcionalidades de gestión de perfiles.
@@ -134,49 +151,115 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 \end{userstory}
 
 \begin{userstory}[tb:prueba]
-	\storyname{Registrar Cita}
+	\storyname{Reservar Cita}
 	\storyuser{Cliente}
-	\storyiter{1.5}
+	\storyiter{1}
 	\storypriority{Alta}
-	\storyrisk{Media}
+	\storyrisk{Alto}
 	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario acceder a la opción de registrar su cita, donde se muestra una página con un formulario a rellenar con los siguientes campos
 		\begin{itemize}
-			\item Nombre
-			\item Apellidos
-			\item Usuario
-			\item Contraseña
-			\item Dirección Particular
-			\item Ci
-			\item Teléfono de localización 
 			\item Cantidad de Documentos a Legalizar
 			\item Obtención de documentos
+			\item Fecha
+			\item Trámite
+			\item Con Notario
+			\item Motivo
 		\end{itemize}
 	}	
 	\storyobservation{
+		\begin{itemize}
+		\item El usuario debe estar autenticado en el sistema y con la información de su perfil completa.
+		\item El sistema comprueba que haya disponibilidad para la fecha seleccionada y guarde al reserva en la base de datos.
+		\end{itemize}
 	}
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-
+\begin{userstory}[tb:prueba]
+	\storyname{Listar Citas}
+	\storyuser{Notario,Legalizador}
+	\storyiter{2}
+	\storypriority{Alta}
+	\storyrisk{Bajo}
+	\storypoints{0.3}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+	Permite a los usuarios listar las citas de todos los clientes donde se muestran la fecha, el cliente, estado y los botones "Aceptar" y "Denegar"
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
 
 \begin{userstory}[tb:prueba]
-	\storyname{Modificar Usuario}
-	\storyuser{Administrador}
+	\storyname{Ver Citas}
+	\storyuser{Cliente}
+	\storyiter{2}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{0.3}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al cliente listar sus citas donde se muestran la fecha y el estado. 
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Aceptar Citas}
+	\storyuser{Notario,Legalizador}
+	\storyiter{2}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{0.1}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+	Permite al usuario cambiar el estado de la cita a "Aceptada" lo que notificará al cliente a su correo electrónico.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Denegar Citas}
+	\storyuser{Notario,Legalizador}
+	\storyiter{2}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{0.1}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario cambiar el estado de la cita a "Denegada" lo que notificará al cliente a su correo electrónico.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Perfil Usuario}
+	\storyuser{Cliente}
 	\storyiter{1}
 	\storypriority{Alta}
 	\storyrisk{Media}
-	\storypoints{1}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storypoints{0.5}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens, Alejandro Santana Viamontes}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de modificar usuario, donde se muestra una página con un formulario con los datos que el usuario puede modificar los cuales son.
 		\begin{itemize}
 			\item Nombre
 			\item Apellidos
 			\item Usuario
-			
+			\item Dirección
+			\item Teléfono
+			\item Carnet de identidad
+			\item Foto de perfil
 		\end{itemize}
 	}	
 	\storyobservation{
@@ -188,46 +271,26 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 \begin{userstory}[tb:prueba]
 	\storyname{Eliminar Usuario}
 	\storyuser{Administrador}
-	\storyiter{1}
-	\storypriority{Alta}
+	\storyiter{2}
+	\storypriority{Medio}
 	\storyrisk{Media}
-	\storypoints{1}
+	\storypoints{0.5}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
-		Permite al usuario poder acceder a la opción de eliminar usuario, donde se muestra una página con un mensaje de advertencia.
-		Estas seguro
-		¡No podrás revertir esto!
+		Permite al usuario poder acceder a la opción de eliminar uno o varios usuarios seleccionados, donde se muestra una advertencia con un mensaje de:
+	    ¿Esta seguro?
+		No podrá revertir esta acción
 	}
 	\storyobservation{
 	}	
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
-
-% Notificar via SMS
-\begin{userstory}[tb:prueba]
-	\storyname{Notificar via SMS}
-	\storyuser{Cliente}
-	\storyiter{1.5}
-	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{0.3}
-	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
-	\storydescription{
-		Permite al usuario recibir una notificación a su teléfono móvil, sobre que la cita ha sido realizada de forma exitosa. Mostrando el siguiente texto.
-		Su cita ha sido programada para (fecha del dia de la cita) y lugar (dirección de la entidad)
-	}
-	\storyobservation{
-	}	
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
-
-
 
 % Crear Tramite
 \begin{userstory}[tb:prueba]
 	\storyname{Crear Tramite}
 	\storyuser{Administrador}
-	\storyiter{4}
+	\storyiter{2}
 	\storypriority{Alta}
 	\storyrisk{Media}
 	\storypoints{1}
@@ -236,8 +299,9 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 		Permite al usuario poder acceder a la opción de crear un trámite a realizar, donde se muestra una página con un formulario a rellenar con los siguientes datos:
 		
 		\begin{itemize}
-			\item Codigo
-			\item Descripcion
+			\item Código
+			\item Nombre
+			\item Descripción
 			\item Precio
 		\end{itemize}
 		
@@ -250,19 +314,20 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 
 % Modificar  Tramite
 \begin{userstory}[tb:prueba]
-	\storyname{Modificar  Tramite}
+	\storyname{Modificar Tramite}
 	\storyuser{Administrador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
+	\storyiter{2}
+	\storypriority{Bajo}
+	\storyrisk{Bajo}
 	\storypoints{1}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
 		Permite al usuario poder acceder a la opción de modificar un trámite a realizar, donde se muestra una página con un formulario con los siguientes datos:
 		
 		\begin{itemize}
-			\item Codigo
-			\item Descripcion
+			\item Código
+			\item Nombre
+			\item Descripción
 			\item Precio
 		\end{itemize}
 		
@@ -275,17 +340,17 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 
 % Eliminar Tramite
 \begin{userstory}[tb:prueba]
-	\storyname{Eliminar   Tramite}
+	\storyname{Eliminar Tramite}
 	\storyuser{Administrador}
-	\storyiter{4}
-	\storypriority{Alta}
-	\storyrisk{Media}
+	\storyiter{2}
+	\storypriority{Media}
+	\storyrisk{Medio}
 	\storypoints{0.3}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
-		Permite al usuario poder acceder a la opción de eliminar , donde se muestra una página con un mensaje de advertencia.
-		Estas seguro
-		¡No podrás revertir esto!		
+		Permite al usuario poder acceder a la opción de eliminar tramite o los seleccionados, donde se muestra una advertencia con un mensaje:
+		¿Esta seguro?
+	    No podrá revertir esta acción		
 		
 	}	
 	\storyobservation{
@@ -293,46 +358,414 @@ Las HU son la técnica que utiliza XP para especificar los requisitos de software
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-% Solicitar Cita al notario
 \begin{userstory}[tb:prueba]
-	\storyname{Solicitar Cita al notario}
-	\storyuser{Cliente}
-	\storyiter{4}
+	\storyname{Listar Tramites}
+	\storyuser{Administrador}
+	\storyiter{2}
 	\storypriority{Alta}
-	\storyrisk{Media}
-	\storypoints{1}
+	\storyrisk{Bajo}
+	\storypoints{0.3}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
-		Permite al usuario poder acceder a la opción de solicitar una cita, donde se muestra una página con un formulario a rellenar con los siguientes campos:
+		Permite al usuario listar los tramites, donde se muestra, el código, nombre, descripción, precio y los botones de "Agregar", "Modificar" y "Eliminar"		
+		
+	}	
+	\storyobservation{
+	}
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Trabajador}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Bajo}
+	\storypoints{0.2}
+	\storyprogrammer{ Alejandro Santana Viamontes
+	}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de crear trabajador, donde se muestra una página con un formulario a rellenar con los siguientes datos:
 		
 		\begin{itemize}
 			\item Nombre
-			\item Apellidos
-			\item Dirección Particular
-			\item Ci
-			\item Teléfono de localización 
-			\item Motivo por el cual Solicita la cita
+			\item Nivel
+			\item Descripción
+			\item Foto
 		\end{itemize}
-		
-	}	
-	\storyobservation{
 	}
+	\storyobservation{
+	}	
 	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
 \end{userstory}
 
-% Aceptar Cita
 \begin{userstory}[tb:prueba]
-	\storyname{Aceptar Cita}
-	\storyuser{Notario}
-	\storyiter{1.5}
+	\storyname{Modificar Trabajador}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Bajo}
+	\storypoints{0.2}
+	\storyprogrammer{ Alejandro Santana Viamontes
+	}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de modificar trabajador, donde se muestra una página con un formulario a rellenar con los siguientes datos:
+		
+		\begin{itemize}
+			\item Nombre
+			\item Nivel
+			\item Descripción
+			\item Foto
+		\end{itemize}
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Trabajador}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Bajo}
+	\storypoints{0.2}
+	\storyprogrammer{ Alejandro Santana Viamontes
+	}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar trabajador, donde se muestra una página con un mensaje de advertencia:
+		¿Esta seguro?
+		No podrá revertir esta acción
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Listar Trabajadores}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Bajo}
+	\storypoints{0.2}
+	\storyprogrammer{ Alejandro Santana Viamontes
+	}
+	\storydescription{
+		Permite al usuario listar los trabajadores, donde se muestra el nombre, nivel y descripción además de  los botones de "Agregar", "Modificar" y "Eliminar"
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Ver Trabajador}
+	\storyuser{Cliente}
+	\storyiter{3}
+	\storypriority{Media}
+	\storyrisk{Bajo}
+	\storypoints{0.2}
+	\storyprogrammer{ Alejandro Santana Viamontes
+	}
+	\storydescription{
+		Permite al usuario ver la información de los trabajadores a través de la pagina de inicio.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Artículo}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Medio}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder crear artículos para el Blog completando un formulario con los siguientes campos.
+		\begin{itemize}
+		\item Título
+		\item Foto
+		\item Descripción
+		\end{itemize}  
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Artículo}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+	Permite al usuario poder modificar los artículos del Blog completando un formulario con los siguientes campos.
+	\begin{itemize}
+		\item Título
+		\item Foto
+		\item Descripción
+	\end{itemize}  
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Artículo}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario poder acceder a la opción de eliminar artículo, donde se muestra una página con un mensaje de advertencia:
+		¿Esta seguro?
+		No podrá revertir esta acción
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Listar Artículos}
+	\storyuser{Administrador}
+	\storyiter{3}
 	\storypriority{Alta}
 	\storyrisk{Media}
 	\storypoints{0.2}
 	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
 	\storydescription{
-		Permite al usuario poder acceder a la opción de Aceptar Cita, donde se muestra una página con un mensaje de advertencia.
-		Estas seguro
-		¡Esta acción sera notificada al cliente!
+		Permite al usuario listar los artículos, donde se muestra el nombre y la fecha de creación además de los botones de "Crear", "Editar" y "Eliminar"
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Leer Artículo}
+	\storyuser{Cliente}
+	\storyiter{3}
+	\storypriority{Baja}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario leer los artículos del blog.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Previsualizar Artículo}
+	\storyuser{Administrador}
+	\storyiter{3}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario observar como quedará el artículo una vez publicado.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Disponibilidad}
+	\storyuser{Notario,Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario crear una disponibilidad completando un formulario con los siguientes campos.
+		\begin{itemize}
+		\item Fecha 
+		\item Cantidad
+		\end{itemize}
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Modificar Disponibilidad}
+	\storyuser{Notario,Legalizador}
+	\storyiter{4}
+	\storypriority{Media}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario modificar una disponibilidad completando un formulario con los siguientes campos.
+	\begin{itemize}
+		\item Fecha 
+		\item Cantidad
+	\end{itemize}
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Disponibilidad}
+	\storyuser{Notario,Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario acceder a la opción de eliminar disponibilidad, donde se muestra una página con un mensaje de advertencia:
+		¿Esta seguro?
+		No podrá revertir esta acción
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Listar Disponibilidades}
+	\storyuser{Notario,Legalizador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+	Permite al usuario listar las disponibilidades, donde se muestra la fecha, cantidad disponibles y cantidad reservadas, además de los botones de "Crear", "Editar" y "Eliminar"
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Crear Opinión}
+	\storyuser{Clientes}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario crear una opinión sobre los servicios brindados por la empresa.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Eliminar Opinión}
+	\storyuser{Administrador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+	Permite al usuario acceder a la opción de eliminar opinión, donde se muestra una página con un mensaje de advertencia:
+	¿Esta seguro?
+	No podrá revertir esta acción
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Listar Opiniones}
+	\storyuser{Administrador}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario listar las opiniones hechas por los clientes, donde se muestra la información de las opiniones así como el botón "Eliminar"
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Acceder al blog}
+	\storyuser{Cliente}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario acceder al blog donde podrá ver los artículos publicados.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Acceder a Contacto}
+	\storyuser{Cliente}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario acceder a la información de contacto como dirección o teléfono de la empresa, un mapa con la ubicación y el formulario de soporte.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Acceder a Servicios}
+	\storyuser{Cliente}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario acceder a los servicios que brinda la empresa donde se muestran los servicios una breve descripción de estos.
+	}
+	\storyobservation{
+	}	
+	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
+\end{userstory}
+
+\begin{userstory}[tb:prueba]
+	\storyname{Acceder a Nosotros}
+	\storyuser{Cliente}
+	\storyiter{4}
+	\storypriority{Alta}
+	\storyrisk{Media}
+	\storypoints{0.2}
+	\storyprogrammer{Técn. Carlos Brayan Rámila Chorens}
+	\storydescription{
+		Permite al usuario acceder a una reseña de la empresa donde se muestran datos como los años de experiencia, la misión y la visión de la empresa, entre otros. 
 	}
 	\storyobservation{
 	}	
@@ -354,22 +787,43 @@ la prioridad con que se implementarán las HU organizadas por iteraciones. Tenien
 asociado a las HU y a las prioridades del cliente, se define una versión que sea de valor para este.
 
 \begin{effortestimation}
-	\addentry[1]{ Registro de Usuario}{0.5}
-	\addentry[1]{ Iniciar Sesión}{ 0.3 }
-	\addentry[1]{ Gestión de Perfiles de Usuario}{0.5}
-	\addentry[1]{ Registrar Cita}{0.3}
-	\addentry[1]{Modificar Usuario}{0.3}
-	\addentry[1]{Eliminar Usuario}{0.2}
-	\addentry[2]{Notificar vía SMS}{0.3}
-	\addentry[3]{Crear Tramite}{0.5}
-	\addentry[3]{Modificar Tramite}{0.3}
-	\addentry[3]{Eliminar Tramite}{0.2}
-	\addentry[3]{Crear Prefactura}{0.5}
-	\addentry[3]{Modificar Prefactura}{0.3}
-	\addentry[3]{Eliminar Prefactura}{0.2}
-	\addentry[3]{Imprimir Prefactura}{0.2}
-	\addentry[4]{Solicitar Cita al notario}{0.4}
-	\addentry[4]{Aceptar Cita}{0.2}
+\addentry[1]{ Registro de Usuario}{0.2}
+\addentry[1]{ Página de Inicio}{1.0}
+\addentry[1]{ Iniciar Sesión}{0.2}
+\addentry[1]{ Gestión de Perfiles de Usuario}{0.2}
+\addentry[1]{ Reservar Cita}{1.0}
+\addentry[1]{ Modificar Perfil Usuario}{0.5}
+\addentry[2]{ Listar Citas}{0.3}
+\addentry[2]{ Ver Citas}{0.3}
+\addentry[2]{ Aceptar Citas}{0.1}
+\addentry[2]{ Denegar Citas}{0.1}
+\addentry[2]{ Eliminar Usuario}{0.5}
+\addentry[2]{ Crear Tramite}{1.0}
+\addentry[2]{ Modificar Tramite}{1.0}
+\addentry[2]{ Eliminar Tramite}{0.3}
+\addentry[2]{ Listar Tramites}{0.3}
+\addentry[3]{ Crear Trabajador}{0.2}
+\addentry[3]{ Modificar Trabajador}{0.2}
+\addentry[3]{ Eliminar Trabajador}{0.2}
+\addentry[3]{ Listar Trabajadores}{0.2}
+\addentry[3]{ Ver Trabajador}{0.2}
+\addentry[3]{ Crear Artículo}{0.2}
+\addentry[3]{ Modificar Artículo}{0.2}
+\addentry[3]{ Eliminar Artículo}{0.2}
+\addentry[3]{ Listar Artículos}{0.2}
+\addentry[3]{ Leer Artículo}{0.2}
+\addentry[3]{ Previsualizar Artículo}{0.2}
+\addentry[4]{ Crear Disponibilidad}{0.2}
+\addentry[4]{ Modificar Disponibilidad}{0.2}
+\addentry[4]{ Eliminar Disponibilidad}{0.2}
+\addentry[4]{ Listar Disponibilidades}{0.2}
+\addentry[4]{ Crear Opinión}{0.2}
+\addentry[4]{ Eliminar Opinión}{0.2}
+\addentry[4]{ Listar Opiniones}{0.2}
+\addentry[4]{ Acceder al blog}{0.2}
+\addentry[4]{ Acceder a Contacto}{0.2}
+\addentry[4]{ Acceder a Servicios}{0.2}
+\addentry[4]{ Acceder a Nosotros}{0.2}
 \end{effortestimation}
 
 
@@ -404,7 +858,7 @@ En el plan de entrega que se plantea a continuación, se hace una propuesta de la
 	\endlastfoot
 	
 	Módulos & Versión 0.1 & Versión 0.2 & Versión 0.3 &Versión 0.4  \\ \hline
-	Fecha & 5/9/2024 & 26/9/2024 & 24/10/2024 & 18/11/2024 \\ \hline
+	Fecha & 20/9/2024 & 20/10/2024 & 5/11/2024 & 20/11/2024 \\ \hline
 	
 \end{longtable}
 
@@ -478,36 +932,45 @@ o que colaboran con ella. A continuación se describen las tarjetas definidas par
 solución.
 
 \begin{crccard}[tb:mytable]
-	\crcclass{RegistroUsuario}
+	\crcclass{WorkerView}
 	\crcresp{
 		\begin{itemize}
-			\item Recibir y validar la información del usuario para el registro.
-			\item Almacenar la información del usuario en la base de datos.
-			\item Enviar un correo electrónico de confirmación al usuario registrado.
+			\item worker()
+			\item storeWorker()
+			\item updateWorker()
+			\item deleteWorker()
+			\item deleteAllWorker()
+			
 		\end{itemize}
 	}
 	\crccolab{
 		\begin{itemize}
-			\item BaseDeDatos: para almacenar la información del usuario.
-			\item ServicioDeCorreo: para enviar el correo electrónico de confirmación.
+			\item Worker
+			\item User
+			\item Middleware
+			
 		\end{itemize}
 	}
 \end{crccard}
 
 
 \begin{crccard}[tb:mytable]
-	\crcclass{IniciarSesion}
+	\crcclass{OpinionView}
 	\crcresp{
 	\begin{itemize}
-		\item Autenticar al usuario utilizando su correo electrónico y contraseña.
-		\item Mantener la sesión activa mientras el usuario navega por la aplicación.
-		\item Redirigir al usuario a la página principal después de iniciar sesión correctamente.
+		\item opinion()
+		\item storeOpinion()
+		\item deleteOpinion()
+		\item deleteAllOpinion()
+		
 	\end{itemize}
 }
 \crccolab{
 	\begin{itemize}
-		\item BaseDeDatos: para verificar las credenciales del usuario.
-		\item InterfazDeUsuario: para mostrar mensajes de error en caso de credenciales incorrectas.
+		\item Opinion
+		\item User
+		\item Middleware
+		
 	\end{itemize}
 }
 \end{crccard}
@@ -515,20 +978,137 @@ solución.
 \clearpage
 
 \begin{crccard}[tb:mytable]
-	\crcclass{GestionPerfilesUsuario}
+	\crcclass{UserView}
 	\crcresp{
 	\begin{itemize}
-		\item Mostrar una lista de todos los usuarios registrados.
-		\item Permitir al administrador crear, editar y eliminar perfiles de usuario.
-		\item Implementar controles de acceso para garantizar la seguridad de las operaciones de gestión de perfiles.
+		\item user()
+		\item storeUser()
+		\item updateUser()
+		\item deleteUser()
+		\item deleteAllUser()
+		
 	\end{itemize}
 }
 \crccolab{
 	\begin{itemize}
-		\item BaseDeDatos: para acceder y actualizar la información de los perfiles de usuario.
-		\item InterfazDeAdministrador: para mostrar la lista de usuarios y proporcionar opciones de edición y eliminación.
+		\item User
+		\item Middleware
+		
 	\end{itemize}
 }
+\end{crccard}
+
+\begin{crccard}[tb:mytable]
+	\crcclass{WebView}
+	\crcresp{
+		\begin{itemize}
+			\item home()
+			\item service()
+			\item about()
+			\item testimoniof()
+			\item blog()
+			\item dashboard()
+			
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item User
+			\item Procedure
+			\item Opinion
+			\item Worker
+			\item Middleware
+			
+		\end{itemize}
+	}
+\end{crccard}
+
+\begin{crccard}[tb:mytable]
+	\crcclass{ProfileView}
+	\crcresp{
+		\begin{itemize}
+			\item profile()
+			\item signup()
+			\item signin()
+			\item signout()
+			\item changePassword()
+			\item updatePerfil()
+			\item updatePhotoPerfil()
+			
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item User
+			\item Middleware
+			
+		\end{itemize}
+	}
+\end{crccard}
+
+\begin{crccard}[tb:mytable]
+	\crcclass{DateView}
+	\crcresp{
+		\begin{itemize}
+			\item reserve()
+			\item date()
+			\item showDate()
+			\item storeDate()
+			\item aceptarDate()
+			\item cancelarDate()
+			
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item Date
+			\item User
+			\item Available
+			\item Procedure
+			\item Middleware
+			
+		\end{itemize}
+	}
+\end{crccard}
+
+\begin{crccard}[tb:mytable]
+	\crcclass{ProcedureView}
+	\crcresp{
+		\begin{itemize}
+			\item procedure()
+			\item storeProcedure()
+			\item updateProcedure()
+			\item deleteProcedure()
+			\item deleteAllProcedure()
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item Procedure
+			\item Middleware
+			
+		\end{itemize}
+	}
+\end{crccard}
+
+\begin{crccard}[tb:mytable]
+	\crcclass{AvailableView}
+	\crcresp{
+		\begin{itemize}
+			\item available()
+			\item storeAvailable()
+			\item updateAvailable()
+			\item deleteAvailable()
+			\item deleteAllAvailable()
+		\end{itemize}
+	}
+	\crccolab{
+		\begin{itemize}
+			\item Available
+			\item Middleware
+			
+		\end{itemize}
+	}
 \end{crccard}
 
 \section{Conclusiones del capítulo}
